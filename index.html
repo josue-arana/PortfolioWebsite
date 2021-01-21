@@ -25,18 +25,19 @@
     <!-- <link rel="stylesheet" href="css/lightbox.min.css"> -->
 </head>
 
-<body>
 
+<body>
     <!-- Main navigation -->
     <header>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container ">
-                <a class="navbar-brand" href="img/logo_black.png" data-lightbox="example-0" data-title="Logo">
-                    <img src="img/logo_black.ico" width="50px" height="50px" alt="Card image cap">
+                <a class="navbar-brand" href="img/logo_black.png" data-lightbox="example-0"
+                    data-title="Logo: Formed of the letters ' . / A ' but the ' ./ ' gives the ilusion of a J together with an A which are my initials.">
+                    <img src="img/logo_black.ico" width="50px" height="50px" alt="Josue Arana's Logo">
                 </a>
                 <a href="img/logo.png" data-lightbox="example-0" data-title="Logo"></a>
-                <a class="text-center navbar-brand" href="#">Portfolio</a>
+                <!-- <a class="text-center navbar-brand" href="#">Portfolio</a> -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -51,14 +52,14 @@
                             <a class="nav-link dropdown-toggle waves-light" id="navbarDropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
                             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#projects">Projects</a>
-                                <a class="dropdown-item" href="#digital_art">Digital Artwork</a>
-                                <a class="dropdown-item" href="#gallery">Gallery</a>
+                                <a class="dropdown-item" href="./software_dev.html">Software Engineering</a>
+                                <a class="dropdown-item" href="./web_dev.html">Web Development</a>
+                                <a class="dropdown-item" href="./artwork.html">Digital Artwork</a>
                             </div>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#about" data-offset="90">About</a>
+                            <a class="nav-link" href="./about_me.html" data-offset="90">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact" data-offset="90">Contact</a>
@@ -95,22 +96,56 @@
 
 
         <!-- Full Page Intro -->
+
         <div id="intro-section" class="view">
-            <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline
+
+            <div class="loader-wrapper">
+                <span class="loader"><span class="loader-inner"></span></span>
+            </div>
+            <div id="anim" style="height:100%; width:100%; background-color: black">
+                <script src="lottie.js"></script>
+            </div>
+            <script>
+                // intro animation 
+                var animation = bodymovin.loadAnimation({
+                    container: document.getElementById('anim'),
+                    render: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "logo_animation.json"
+                });
+                // end page loader animation 
+                $(window).on("load", function () {
+                    $(".loader-wrapper").fadeOut("slow");
+                });
+            </script>
+
+            <!-- <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline
                 autoplay muted loop>
                 <source src="./artwork/Videos/mov1.mp4" type="video/mp4; codecs=avc1">
                 <source src="./artwork/Videos/mov1.mpg" type="video/mp4; codecs=mpeg">
                 <source src="./artwork/Videos/mov1.avi" type="video/avi; codecs=hevc">
                 <source src="./artwork/Videos/io_ghost.webm" type="video/webm">
-            </video>
+            </video> -->
+            <!-- <div id="ripple"
+                style=" display: none; height:100%; Width: 100%; position: absolute; left: 0%; top: 0%; right: 0%; bottom: 0%; background: url(/artwork/back3-min.png) left top / cover;">
+                <div class="col-md-12 mb-4 white-text text-center wow fadeInUp align-items-center" id="hero-content">
+                
+                
+                    <h3 class="h3section animated zoomIn display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5" style="margin-top:250px; margin-bottom:250px" id="snell_roundhand">
+                        Josue Arana</h3>
+                    <hr class="hr-light my-4 w-75">
+                    <h4 class="subtext-header mt-2 mb-4">Software Engineer/ Developer / Web Designer</h4>
+                </div>
+            </div> -->
             <!-- Mask & flexbox options-->
-            <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
-                <!-- Content -->
+            <!-- <div style="display:none" class="mask rgba-gradient d-flex justify-content-center align-items-center">
+               
                 <div class="container px-md-3 px-sm-0">
-                    <!--Grid row-->
-                    <div class="row wow fadeIn">
-                        <!--Grid column-->
-                        <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
+                    
+                    <div class="row wow fadeInUp">
+                        
+                        <div class="col-md-12 mb-4 white-text text-center wow fadeInUp">
 
 
                             <h3 class="animated zoomIn display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5"
@@ -120,731 +155,176 @@
                             <h4 class="subtext-header mt-2 mb-4">Development: JAVA, HTML, CSS, JavaScript, PHP, Python,
                                 Ocaml, among others.</h4>
                         </div>
-                        <!--Grid column-->
                     </div>
-                    <!--Grid row-->
                 </div>
-                <!-- Content -->
-            </div>
+            </div> -->
             <!-- Mask & flexbox options-->
         </div>
+
+
         <!-- Full Page Intro -->
     </header>
 
     <!--Main layout-->
     <main>
+        <section id="web-dev" class="text-center py-5" style="background-color: black; align-items: center;">
+            <div class="wow animated zoomInDown col-md-12 mb-4 white-text text-center" style="margin-top:20%">
+
+                <h3 class=" display-3 font-weight-bold grey-text mb-0 pt-md-5 pt-5" id="snell_roundhand">
+                    JOSUE ARANA</h3>
+                <hr class="hr-light my-4 w-75 grey-text">
+                <h4 class="subtext-header mt-2 mb-4 grey-text">Software Engineer/ Developer / Web Designer</h4>
+            </div>
+        </section>
+
 
         <!--Section: projects-->
-        <section id="projects" class="text-center py-5" style="background-color: #eee;">
+        <section id="projects" class="text-center py-5" style="background-color: rgb(0, 0, 0);">
 
             <!-- Container -->
-            <div class="container py-5">
+            <div class="container py-5" style="background-color: rgb(0, 0, 0);">
 
                 <!-- Section heading -->
-                <h2 class="h1-responsive font-weight-bold mb-5">Projects</h2>
+                <h2 class="h1-responsive font-weight-bold mb-5 wow fadeInUp" style="color: white; opacity: .8;">
+                    Projects
+                </h2>
                 <!-- Section description -->
-
-                <!-- Project 1 and 2 row -->
-                <div class="row text-center py-2">
-                
-                    <!-- 1 -->
-                    <div class="wow fadeInLeft col-lg-6 col-md-12 mb-lg-0 mb-3">
-                        <!--Featured image-->
-                        <div class="overlay align-items-center"  >
-                            <a href="https://doris-naturals.netlify.app/" target="_blank">
-                                <img class="img-fluid align-center lazyload" data-src="img/ecomimg.png" alt="Sample project video" width="350px"
-                                height="350px" />
-                            </a>
-                            
-                        </div>
-                        <!-- Card image -->
-                
-                        <!--Excerpt-->
-                        <div class="card-body pb-0">
-                            <div>
-                                <a>
-                                    <h4 class="font-weight-bold my-3">E-Commerce Website</h4>
-                                    <h5><i class="fas fa-code left blue-text"> HTML CSS JS </i></h5>
-                                </a>
-                            </div>
-                
-                            <p class="grey-text">
-                                E-commerce page to sell personal care products implemented with bootstrap.</p>
-                            <a href="https://github.com/josue-arana/Doris_naturals" class="btn btn-blue btn-sm" target="_blank">
-                                <i class="fa fa-clone left"></i> View Project</a>
-                            <a href="https://doris-naturals.netlify.app/" class="btn btn-blue btn-sm" target="_blank">
-                                    <i class="fa fa-clone left"></i> Go to Website</a>
-                        </div>
-                    </div>
-                    <!-- P1 Ends -->
-                
-                    <!-- P2 -->
-                    <div class="wow fadeInLeft col-lg-6 col-md-6 mb-md-0 mb-3">
-                        <!--Featured image-->
-                        <div class="overlay align-items-center">
-                            <img class="img-fluid align-center lazyload" data-src="img/jawebimg.png" alt="Sample project video"
-                                width="350px" height="350px" />
-                        </div>
-                        <!--Excerpt-->
-                        <div class="card-body pb-0">
-                            <div>
-                                <a>
-                                    <h4 class="font-weight-bold my-3">Portfolio Website</h4>
-                                    <h5><i class="fas fa-code left blue-text"> HTML CSS JS</i></h5>
-                                </a>
-                            </div>
-                            <p class="grey-text">
-                                Created my own portfolio website using bootstrap.</p>
-                            <a href="https://github.com/josue-arana/PortfolioWebsite" class="btn btn-blue btn-sm" target="_blank"><i
-                                    class="fa fa-clone left"></i> View Project
-                                </a>
-                        </div>
-                    </div>
-                    <!-- P2 ends -->
-                </div>
-                <!-- Project 1 and 2 row ENDS -->
                 <br>
 
-                <!-- Project 3 and 4 row  -->
-                <div class="row text-center py-2">
-
-                    <!-- Grid column -->
-                    <div class="wow fadeInRight col-lg-6 col-md-12 mb-lg-0 mb-3">
-                        <!--Featured image-->
-                        <div class="overlay align-items-center">
-                            <img class="img-fluid align-center lazyload" data-src="img/simple_shell.jpg" alt="Sample project video"
-                                width="350px" height="350px" />
+                <!-- Web Development Projects  -->
+                <div class="container">
+                    <div class="row align-items-center wow fadeInUp">
+                        <div class="col-md">
+                            <a href="./web_dev.html">
+                                <img class="card-img img-fluid align-center lazyload" data-src="img/web.jpg"
+                                    alt=" Image of Web Development Section" width="350px" height="350px" />
+                            </a>
                         </div>
-                        <!-- Card image -->
+                        <div class="col-md ">
+                            <div class="card-body  align-center">
+                                <div>
+                                    <a>
+                                        <h4 class="font-weight-bold my-3 grey-text">Web Development</h4>
+                                        <button class="btn button-code">HTML</button>
+                                        <button class="btn button-code">CSS</button>
+                                        <button class="btn button-code">JS</button>
+                                        <button class="btn button-code">React</button>
+                                    </a>
+                                </div>
 
-                        <!--Excerpt-->
-                        <div class="card-body pb-0">
-                            <div>
-                                <a>
-                                    <h4 class="font-weight-bold my-3">Simple Shell</h4>
-                                    <h5><i class="fas fa-code left blue-text"> C </i></h5>
-                                </a>
+                                <p class="grey-text">
+                                    The above are some of the tools I've used and I'm familiar with.</p>
+                                <a href="./web_dev.html" class="btn btn-white btn-sm" style="opacity: .9;">
+                                    <i class="fa fa-clone left"></i> View Projects</a>
                             </div>
-
-                            <p class="grey-text">
-                                A command line interface based on the Unix Bash shell.
-                                Supports boolean operations, pipes, and file redirection</p>
-                            <a href="https://github.com/josue-arana" class="btn btn-blue btn-sm" target="_blank">
-                                <i class="fa fa-clone left"></i> View project</a>
                         </div>
                     </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="wow fadeInRight col-lg-6 col-md-6 mb-md-0 mb-3">
-                        <!--Featured image-->
-                        <div class="overlay align-items-center">
-                            <img class="img-fluid align-center lazyload" data-src="img/smallc.jpg" alt="Sample project video"
-                                width="350px" height="350px" />
-                        </div>
-                        <!--Excerpt-->
-                        <div class="card-body pb-0">
-                            <div>
-                                <a>
-                                    <h4 class="font-weight-bold my-3">Small-C Interpreter</h4>
-                                    <h5><i class="fas fa-code left blue-text"> Ocaml</i></h5>
-                                </a>
-                            </div>
-                            <p class="grey-text">
-                                Given an input string it allows the user to recognize and run expressions and/or
-                                statements.
-                                corresponding to the input</p>
-                            <a href="https://github.com/josue-arana" class="btn btn-blue btn-sm" target="_blank"><i
-                                    class="fa fa-clone left"></i> View project</a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
                 </div>
-                <!-- Project 3 and 4 row ENDS -->
 
-                <!-- Project 5 and 6 row  -->
-                <div class="row text-center py-2">
 
-                    <!-- Grid column -->
-                    <div class="wow fadeInLeft col-lg-6 col-md-12 mb-lg-0 mb-3">
-                        <!--Featured image-->
-                        <div class="overlay align-items-center">
+                <br>
 
-                            <img class="img-fluid align-center" src="img/nfa.jpg" alt="Sample project video"
-                                width="350px" height="350px" />
-                            <!-- <img class="img-fluid align-center" src="img/code3.jpeg" alt="Sample project video" /> -->
+                <!-- Software Engineering Projects  -->
+                <div class="container">
+                    <div class="row align-items-center wow fadeInUp">
+                        <div class="col-md">
+                            <a href="./software_dev.html">
+                                <div class="overlay align-items-center">
+                                    <img class="img-fluid card-img align-center lazyload"
+                                        data-src="img/simple_shell.jpg" alt="Card Image of Software Engineering Section"
+                                        width=" 350px" height="350px" />
+                                </div>
+                            </a>
                         </div>
-                        <!--Excerpt-->
-                        <div class="card-body pb-0">
-                            <div>
-                                <a>
-                                    <h4 class="font-weight-bold my-3">Regular Expressions Engine</h4>
-                                    <h5><i class="fas fa-code left blue-text"> Ocaml </i></h5>
-                                </a>
+                        <div class="col-md ">
+                            <div class="card-body  align-center">
+                                <div>
+                                    <a>
+                                        <h4 class="font-weight-bold my-3 grey-text">Software Engineering</h4>
+                                        <button class="btn button-code">JAVA</button>
+                                        <button class="btn button-code">C</button>
+                                        <button class="btn button-code">PYTHON</button>
+                                        <button class="btn button-code">PHP</button>
+                                    </a>
+                                </div>
+
+                                <p class="grey-text">
+                                    The above are some of the languages I've used in the past and I'm most familiar
+                                    with.</p>
+                                <a href="./software_dev.html" class="btn btn-white btn-sm" style="opacity: .9;">
+                                    <i class="fa fa-clone left"></i> View Projects</a>
                             </div>
-                            <p class="grey-text">Handles conversions from NFA to DFA, and regular expressions to NFA</p>
-                            <a href="https://github.com/josue-arana" class="btn btn-blue btn-sm" target="_blank"><i
-                                    class="fa fa-clone left"></i> View project</a>
                         </div>
                     </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="wow fadeInLeft col-lg-6 col-md-6 mb-md-0 mb-3">
-                        <!--Featured image-->
-                        <div class="overlay align-items-center">
-                            <img class="img-fluid lazyload" data-src="img/avl.jpg" alt="Sample project video" width="350px"
-                                height="350px" />
-                        </div>
-                        <!--Excerpt-->
-                        <div class="card-body pb-0">
-                            <div>
-                                <a>
-                                    <h4 class="font-weight-bold my-3">AVL-G Trees</h4>
-                                    <h5><i class="fab fa-java left blue-text"> Java</i></h5>
-                                </a>
-                            </div>
-                            <p class="grey-text"> This project represents an <a
-                                    href="https://en.wikipedia.org/wiki/AVL_tree">AVL Tree</a> with
-                                a relaxed balance condition. Its constructor receives a strictly positive parameter
-                                which controls the maximum
-                                imbalance allowed on any subtree of the tree which it creates.</p>
-                            <a href="https://github.com/josue-arana" class="btn btn-blue btn-sm" target="_blank"><i
-                                    class="fa fa-clone left"></i>View project</a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
                 </div>
-                <!-- Grid row -->
+
+                <br>
+
+                <!-- Digital Artwork Project  -->
+                <div class="container">
+                    <div class="row align-items-center wow fadeInUp">
+                        <div class="col-md">
+                            <a href="./artwork.html">
+                                <div class="overlay align-items-center">
+                                    <img class="img-fluid card-img align-center lazyload" data-src="img/rocket2.jpg"
+                                        alt="Card Image of Digital Artwork Section" width="350px" height="350px" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md ">
+                            <div class="card-body align-center">
+                                <div>
+                                    <a>
+                                        <h4 class="font-weight-bold my-3 grey-text">Digital Artwork</h4>
+                                        <button class="btn button-code">UNITY</button>
+                                        <button class="btn button-code">MAYA 3D MODELING</button>
+                                        <button class="btn button-code">PROCESSING</button>
+                                        <button class="btn button-code">ADOBE SUITE</button>
+                                    </a>
+                                </div>
+
+                                <p class="grey-text">
+                                    The above are some of the art and design tools I've used in the past and I'm most
+                                    familiar
+                                    with.</p>
+                                <a href="./artwork.html" class="btn btn-white btn-sm" style="opacity: .9;">
+                                    <i class="fa fa-clone left"></i> View Art</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
             <!-- Container -->
 
         </section>
         <!--Section: projects-->
-
-
-        <!--Section: Digital Artwork-->
-        <section id="digital_art" class="text-center py-5" style="background-color: rgb(255, 255, 255);">
-
-            <!-- Container -->
-            <div class="container py-5">
-                <style>
-                    .video {
-                        /* override other styles to make responsive */
-                        width: 100% !important;
-                        height: auto !important;
-                    }
-                </style>
-
-                <!-- Section heading -->
-                <h2 class="h1-responsive font-weight-bold mb-5">Digital Artwork</h2>
-                <!-- Section description -->
-
-
-                <!-- Grid row -->
-                <div class="row text-center">
-
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
-                        <!--Featured image-->
-                        <div class="view overlay rounded z-depth-1">
-                            <video class="video" autoplay loop controls muted>
-                                <source src="./artwork/Videos/spiral.mp4" type="video/mp4; codecs=avc1">
-                            </video>
-                        </div>
-                        <!--Excerpt-->
-                        <div class="card-body pb-0">
-                            <h4 class="font-weight-bold my-3">Spiral</h4>
-                            <a class="sm">
-                                <i class="fab fa-java left blue-text"> Java</i>
-                            </a>
-                            <p class="grey-text"></p>
-                            <a href="https://github.com/josue-arana/Spiral_Processing" class="btn btn-blue btn-sm"
-                                target="_blank">
-                                <i class="fa fa-clone left"></i>Code</a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
-                        <!--Featured image-->
-                        <div class="view overlay rounded z-depth-1">
-                            <video class="video" autoplay loop controls muted>
-                                <source src="./artwork/Videos/rocket720.mp4" type="video/mp4; codecs=avc1">
-                            </video>
-                        </div>
-                        <!--Excerpt-->
-                        <div class="card-body pb-0">
-                            <h4 class="font-weight-bold my-3">Rocket Game</h4>
-                            <a class="sm">
-                                <i class="fab fa-java left blue-text"> Java</i>
-                            </a>
-                            <p class="grey-text"></p>
-                            <a href="https://github.com/josue-arana/Rocket_game" class="btn btn-blue btn-sm"
-                                target="_blank"><i class="fa fa-clone left"></i>View Project</a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-6">
-                        <!--Featured image-->
-                        <div class="view overlay rounded z-depth-1">
-                            <a class="example-image-link" href="./artwork/Videos/waves-c.mp4" data-lightbox="example-1"
-                                data-title="Artistic Pattern: Waves">
-                                <!-- <img class="img-fluid" src="./artwork/Videos/waves-c.mp4" alt="Sample project video" /> -->
-
-                                <video class="video" autoplay loop controls muted>
-                                    <source src="./artwork/Videos/waves-c.mp4" type="video/mp4; codecs=avc1"
-                                        alt="Sample project video">
-                                </video>
-                            </a>
-                        </div>
-                        <!--Excerpt-->
-                        <div class="card-body pb-0">
-                            <h4 class="font-weight-bold my-3">Tri-Waves</h4>
-                            <a class="sm">
-                                <i class="fab fa-java left blue-text"> Java</i>
-                            </a>
-                            <p class="grey-text"></p>
-                            <a href="https://github.com/josue-arana/Tri-Waves_Processing" class="btn btn-blue btn-sm"
-                                target="_blank"><i class="fa fa-clone left"></i>Code</a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row -->
-
-            </div>
-            <!-- Container -->
-
-        </section>
-        <!--Section: Digital Artwork-->
-
-        <!--Section: about-->
-        <section id="about" class="py-5">
-
-            <!-- Container -->
-            <div class="container">
-                <!-- Section heading -->
-                <h2 class="h1-responsive font-weight-bold text-center mb-5">About Me</h2>
-                <!-- Section description -->
-                <p class="lead grey-text text-center w-responsive mx-auto mb-5"></p>
-
-                <!-- Grid row -->
-                <div class="row">
-
-                    <!-- Grid column -->
-                    <div class="col-lg-5 text-center text-lg-left view overlay rounded z-depth">
-                        <img class="img-fluid" src="artwork/profile_pic2.jpg" alt="Sample image">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-lg-7">
-
-                        <!-- Grid row -->
-                        <div class="row mb-3">
-
-                            <!-- Grid column -->
-                            <div class="col-1">
-                                <i class="fa fa-mail-forward fa-lg blue-text"></i>
-                            </div>
-                            <!-- Grid column -->
-
-                            <!-- Grid column -->
-                            <div class="col-xl-10 col-md-11 col-10 py-2">
-                                <h5 class="font-weight-bold mb-3" style="text-align: center">Past</h5>
-                                <p class="grey-text">I was born and raised in Guatemala City, Guatemala.
-                                    My passion for art started when I was 8 years old.
-                                    At age 18, I did my first full canvas drawing like the ones in my portfolio.
-                                    In 2017, I obtained my Associate of Arts at Montgomery College,
-                                    then transferred to the University of Maryland at College Park.</p>
-                            </div>
-                            <!-- Grid column -->
-
-                        </div>
-                        <!-- Grid row -->
-
-                        <!-- Grid row -->
-                        <div class="row mb-3">
-
-                            <!-- Grid column -->
-                            <div class="col-1">
-                                <i class="fa fa-mail-forward fa-lg blue-text"></i>
-                            </div>
-                            <!-- Grid column -->
-
-                            <!-- Grid column -->
-                            <div class="col-xl-10 col-md-11 col-10">
-                                <h5 class="font-weight-bold mb-3" style="text-align: center">Present</h5>
-                                <p class="grey-text">Currently pursuing my bachelor in Computer Science.
-                                    In the last couple of years, drawing has become more like a hobby.
-                                    However, I've managed to pass on my creativity, passion, and dedication to excel in
-                                    my field of study.</p>
-                            </div>
-                            <!-- Grid column -->
-
-                        </div>
-                        <!-- Grid row -->
-
-                        <!--Grid row-->
-                        <div class="row">
-
-                            <!-- Grid column -->
-                            <div class="col-1">
-                                <i class="fa fa-mail-forward fa-lg blue-text"></i>
-                            </div>
-                            <!-- Grid column -->
-
-                            <!-- Grid column -->
-                            <div class="col-xl-10 col-md-11 col-10">
-                                <h5 class="font-weight-bold mb-3" style="text-align: center">Future</h5>
-                                <p class="grey-text mb-0">My goal is to graduate, and become a Software Engineer to be
-                                    able to work and learn from the best companies so that someday I can have my own
-                                    company.</p>
-                            </div>
-                            <!-- Grid column -->
-
-                        </div>
-                        <!--Grid row-->
-
-                    </div>
-                    <!--Grid column-->
-
-                </div>
-                <!-- Grid row -->
-
-            </div>
-            <!-- Container -->
-
-        </section>
-        <!--Section: about-->
-
-
-        <!--Section: Gallery-->
-        <section id="gallery" class="text-center py-5" style="background-color: rgb(255, 255, 255);">
-
-            <!-- Container -->
-            <div class="container">
-
-                <!-- Section heading -->
-                <h2 class="h1-responsive font-weight-bold mb-5">Gallery</h2>
-                <button type="button" class="btn blue-gradient slideInUp" onclick="displayGallery()">View</button>
-
-                <!--Grid row-->
-                <div class="container wow slideInUp py-5 " id="container2" style="display:none;">
-
-                    <div class="row wow slideInUp">
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-12 mb-4">
-
-                            <!-- Card Narrower -->
-                            <div class="card card-cascade narrower">
-
-                                <!-- Card image -->
-                                <div class="view view-cascade">
-                                    <a class="example-image-link" href="artwork/images/journey1v1.jpg"
-                                        data-lightbox="example-set" data-title="The Journey 1: Roman Ruins in Lebanon">
-                                        <img class="card-img-top lazyload" data-src="artwork/images/journey1v1.jpg" alt="image-1" />
-                                    </a>
-                                </div>
-
-                                <!-- Card content -->
-                                <div class="card-body card-body-cascade">
-
-                                    <!-- Label -->
-
-                                    <!-- Text -->
-                                    <p class="card-text">The Journey 1</p>
-                                    <!-- Button -->
-
-                                </div>
-
-                            </div>
-                            <!-- Card Narrower -->
-
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-
-                            <!-- Card Narrower -->
-                            <div class="card card-cascade narrower">
-
-                                <!-- Card image -->
-                                <div class="view view-cascade">
-                                    <a href="artwork/images/journey2v1.jpg" data-lightbox="example-set"
-                                        data-title="The Journey 2: Brazil">
-                                        <img class="card-img-top lazyload" data-src="artwork/images/journey2v1.jpg"
-                                            alt="Card image cap">
-                                    </a>
-                                </div>
-
-                                <!-- Card content -->
-                                <div class="card-body card-body-cascade">
-
-                                    <!-- Text -->
-                                    <p class="card-text">The Journey 2</p>
-
-                                </div>
-
-                            </div>
-                            <!-- Card Narrower -->
-
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-
-                            <!-- Card Narrower -->
-                            <div class="card card-cascade narrower">
-
-                                <!-- Card image -->
-                                <div class="view view-cascade">
-                                    <a href="artwork/images/journey3v1.jpg" data-lightbox="example-set"
-                                        data-title="The Journey 3: China">
-                                        <img class="card-img-top lazyload" data-src="artwork/images/journey3v1.jpg"
-                                            alt="Card image cap">
-                                    </a>
-                                </div>
-
-                                <!-- Card content -->
-                                <div class="card-body card-body-cascade">
-
-                                    <!-- Text -->
-                                    <p class="card-text">The Journey 3</p>
-
-                                </div>
-
-                            </div>
-                            <!-- Card Narrower -->
-
-                        </div>
-                        <!--Grid column-->
-
-                    </div>
-                    <!--Grid row-->
-
-                    <!--Grid row-->
-                    <div class="row wow slideInUp">
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-12 mb-4">
-
-                            <!-- Card Narrower -->
-                            <div class="card card-cascade narrower">
-
-                                <!-- Card image -->
-                                <div class="view view-cascade">
-                                    <a href="artwork/images/rafa_original.JPG" data-lightbox="example-set"
-                                        data-title="The Transfiguration: Part of the original painting by Rafael in 1516-20, Moses and Elijah appear before the transfigured Christ. Grid-technique, graphite pencil.">
-                                        <img class="card-img-top lazyload" data-src="artwork/images/Rafa.jpg" alt="Card image cap">
-                                    </a>
-                                </div>
-
-                                <!-- Card content -->
-                                <div class="card-body card-body-cascade">
-
-                                    <!-- Label -->
-
-                                    <!-- Text -->
-                                    <p class="card-text">The Transfiguration (replica)</p>
-                                    <!-- Button -->
-
-                                </div>
-
-                            </div>
-                            <!-- Card Narrower -->
-
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-
-                            <!-- Card Narrower -->
-                            <div class="card card-cascade narrower">
-
-                                <!-- Card image -->
-                                <div class="view view-cascade">
-                                    <a href="artwork/images/tarzan.jpg" data-lightbox="example-set"
-                                        data-title="Tarzan Awaiting: made with granite pencil on full canvas 18x25in with a real model.">
-                                        <img class="card-img-top lazyload" data-src="artwork/images/tarzan.jpg" alt="Card image cap">
-                                    </a>
-                                </div>
-
-                                <!-- Card content -->
-                                <div class="card-body card-body-cascade">
-
-                                    <!-- Text -->
-                                    <p class="card-text">Tarzan Awaiting</p>
-
-                                </div>
-
-                            </div>
-                            <!-- Card Narrower -->
-
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-
-                            <!-- Card Narrower -->
-                            <div class="card card-cascade narrower">
-
-                                <!-- Card image -->
-                                <div class="view view-cascade">
-                                    <a href="artwork/images/musician v1.jpg" data-lightbox="example-set"
-                                        data-title="The Musician: made with graphite pencil on full canvas 18x25in with a real model.">
-                                        <img class="card-img-top lazyload" data-src="artwork/images/musician v1.jpg"
-                                            alt="Card image cap">
-                                    </a>
-                                </div>
-
-                                <!-- Card content -->
-                                <div class="card-body card-body-cascade">
-
-                                    <!-- Text -->
-                                    <p class="card-text">The Musician</p>
-
-                                </div>
-
-                            </div>
-                            <!-- Card Narrower -->
-
-                        </div>
-                        <!--Grid column-->
-
-                    </div>
-                    <!--Grid row-->
-
-                    <!--Grid row-->
-                    <div class="row wow slideInUp">
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-12 mb-4">
-
-                            <!-- Card Narrower -->
-                            <div class="card card-cascade narrower">
-
-                                <!-- Card image -->
-                                <div class="view view-cascade">
-                                    <a href="artwork/images/ink v1.jpg" data-lightbox="example-set"
-                                        data-title="Ink Bamboo Painting">
-                                        <img class="card-img-top lazyload" data-src="artwork/images/ink v1.jpg" alt="Card image cap">
-                                    </a>
-                                </div>
-
-                                <!-- Card content -->
-                                <div class="card-body card-body-cascade">
-
-                                    <!-- Label -->
-
-                                    <!-- Text -->
-                                    <p class="card-text">Ink Bamboo Painting</p>
-                                    <!-- Button -->
-
-                                </div>
-
-                            </div>
-                            <!-- Card Narrower -->
-
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-
-                            <!-- Card Narrower -->
-                            <div class="card card-cascade narrower">
-
-                                <!-- Card image -->
-                                <div class="view view-cascade">
-                                    <a href="artwork/images/friend v1.jpg" data-lightbox="example-set"
-                                        data-title="Lookout for a Friend: graphite pencil on 7x10 in mixed media paper.">
-                                        <img class="card-img-top lazyload" data-src="artwork/images/friend v1.jpg"
-                                            alt="Card image cap">
-                                    </a>
-                                </div>
-
-                                <!-- Card content -->
-                                <div class="card-body card-body-cascade">
-                                    <!-- Text -->
-                                    <p class="card-text">Lookout for a Friend</p>
-                                </div>
-                            </div>
-                            <!-- Card Narrower -->
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-
-                            <!-- Card Narrower -->
-                            <div class="card card-cascade narrower">
-
-                                <!-- Card image -->
-                                <div class="view view-cascade">
-                                    <a href="artwork/images/selfportrait v1.jpg" data-lightbox="example-set"
-                                        data-title="Self-portrait: graphite pencil on 18x25 in drawing paper.">
-                                        <img class="card-img-top lazyload" data-src="artwork/images/selfportrait v1.jpg"
-                                            alt="Card image cap">
-                                    </a>
-                                </div>
-
-                                <!-- Card content -->
-                                <div class="card-body card-body-cascade">
-                                    <!-- Text -->
-                                    <p class="card-text">Self-portrait</p>
-                                </div>
-                            </div>
-                            <!-- Card Narrower -->
-                        </div>
-                        <!--Grid column-->
-                    </div>
-                    <!--Grid row-->
-                </div>
-                <!--Grid container2-->
-
-            </div>
-            <!-- Container -->
-
-        </section>
-        <!--Section: gallery-->
 
 
 
         <section id="quote">
-
-            <div class="view view-cascade">
-                <img class="card-img-top lazyload" data-src="img/good2.jpg" alt="Card image cap">
-                <a>
-                    <div class="mask img-gradient"></div>
-                </a>
+            <div class="view view-cascade" style="cursor:sw-resize">
+                <img class="card-img-top lazyload" style="height:100%" data-src="img/quote.png"
+                    alt="Image with the quote 'If better is possible, good is not enough' by Benjamin Franklyn.">
+                <div id="ripple"
+                    style=" min-height: 800px; height:100%; Width: 100%; position: absolute; left: 0%; top: 0%; right: 0%; bottom: 0%; background: url(/img/quote.png) left top / fit;">
+                </div>
             </div>
+        </section>
 
+        <section>
         </section>
 
 
 
         <!--Section: contact-->
-        <section id="contact" class="py-5" style="background-color: #eee;">
+        <section id="contact" class="py-5" style="background-color:black">
 
             <div class="container">
 
                 <!-- Section heading -->
-                <h2 class="h1-responsive font-weight-bold text-center mb-5">Contact Me</h2>
+                <h2 class="h1-responsive font-weight-bold text-center mb-5" style="color: white; opacity: .8;">Let's
+                    Talk! </h2>
                 <!-- Section description -->
                 <p class="text-center w-responsive mx-auto mb-5"></p>
 
@@ -862,7 +342,8 @@
                                 <!-- Grid column -->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" name="name" id="contact-name" class="form-control">
+                                        <input type="text" name="name" id="contact-name" class="form-control white-text"
+                                            required>
                                         <label for="contact-name" class="">Your name</label>
                                     </div>
                                 </div>
@@ -871,7 +352,8 @@
                                 <!-- Grid column -->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" name="email" id="contact-email" class="form-control">
+                                        <input type="text" name="email" id="contact-email"
+                                            class="form-control white-text" required>
                                         <label for="contact-email" class="">Your email</label>
                                     </div>
                                 </div>
@@ -886,7 +368,8 @@
                                 <!-- Grid column -->
                                 <div class="col-md-12">
                                     <div class="md-form mb-0">
-                                        <input type="text" name="subject" id="contact-Subject" class="form-control">
+                                        <input type="text" name="subject" id="contact-Subject"
+                                            class="form-control white-text" required>
                                         <label for="contact-Subject" class="">Subject</label>
                                     </div>
                                 </div>
@@ -902,7 +385,7 @@
                                 <div class="col-md-12">
                                     <div class="md-form">
                                         <textarea type="text" name="message" id="contact-message"
-                                            class="form-control md-textarea" rows="3"></textarea>
+                                            class="form-control md-textarea white-text" rows="3" required></textarea>
                                         <label for="contact-message">Your message</label>
                                     </div>
                                 </div>
@@ -916,7 +399,7 @@
 
                             <div class="text-center text-md-left">
                                 <p>
-                                    <button type="submit" class="btn btn-blue btn-md">Send Message</button>
+                                    <button type="submit" class="btn peach-gradient btn-lg">CONTACT NOW</button>
                                 </p>
                             </div>
 
@@ -931,22 +414,22 @@
                         <ul class="list-unstyled mb-0">
                             <li>
                                 <a href="resume.pdf" target="_blank">
-                                    <i class="fas fa-file fa-3x mt-3 blue-text"></i>
-                                    <p class="mb-0">Check out my Resume</p></i>
+                                    <i class="orange-hover fas fa-file fa-3x mt-3 white-text"></i>
+                                    <p class="orange-hover mb-0 white-text">Resume</p></i>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="https://www.linkedin.com/in/josue-arana/" target="_blank">
-                                    <i class="fab fa-linkedin fa-3x mt-3  blue-text"></i>
-                                    <p class="mb-0">Let's Link up!</p>
+                                    <i class="orange-hover fab fa-linkedin fa-3x mt-3  white-text"></i>
+                                    <p class="orange-hover mb-0 white-text">Let's Link up!</p>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="mailto:josuee.arana@gmail.com">
-                                    <i class="fa fa-envelope fa-3x mt-3 blue-text"></i>
-                                    <p class="mb-0">Send me an Email</p>
+                                    <i class="orange-hover fa fa-envelope fa-3x mt-3 white-text"></i>
+                                    <p class="orange-hover mb-0 white-text">Email Me</p>
                                 </a>
                             </li>
 
@@ -1041,6 +524,22 @@
         }
 
     </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js"></script>
+
+    <script async>
+
+        $('#ripple').ripples({
+            resolution: 512,
+            dropRadius: 20,
+            perturbance: 0.02,
+        });
+
+
+
+    </script>
+
 
 </body>
 
