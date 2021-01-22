@@ -33,7 +33,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container ">
                 <a class="navbar-brand" href="img/logo_black.png" data-lightbox="example-0"
-                    data-title="Logo: Formed of the letters ' . / A ' but the ' ./ ' gives the ilusion of a J together with an A which are my initials.">
+                    data-title="Logo: Formed by the characters ' . / A ' where the dot and the slash give the illusion of a J. Next to an A to show my initials.">
                     <img src="img/logo_black.ico" width="50px" height="50px" alt="Josue Arana's Logo">
                 </a>
                 <a href="img/logo.png" data-lightbox="example-0" data-title="Logo"></a>
@@ -52,14 +52,14 @@
                             <a class="nav-link dropdown-toggle waves-light" id="navbarDropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
                             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="./software_dev.html">Software Engineering</a>
-                                <a class="dropdown-item" href="./web_dev.html">Web Development</a>
-                                <a class="dropdown-item" href="./artwork.html">Digital Artwork</a>
+                                <a class="dropdown-item" href="./software_dev">Software Engineering</a>
+                                <a class="dropdown-item" href="./web_dev">Web Development</a>
+                                <a class="dropdown-item" href="./artwork">Digital Artwork</a>
                             </div>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./about_me.html" data-offset="90">About</a>
+                            <a class="nav-link" href="./about_me" data-offset="90">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact" data-offset="90">Contact</a>
@@ -115,9 +115,13 @@
                     path: "logo_animation.json"
                 });
                 // end page loader animation 
-                $(window).on("load", function () {
-                    $(".loader-wrapper").fadeOut("slow");
-                });
+                try {
+                    $(window).load(function () {
+                        $(".loader-wrapper").fadeOut("slow");
+                    });
+                } catch (err) {
+                    console.log(err.message);
+                }
             </script>
 
             <!-- <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline
@@ -139,25 +143,21 @@
                 </div>
             </div> -->
             <!-- Mask & flexbox options-->
-            <!-- <div style="display:none" class="mask rgba-gradient d-flex justify-content-center align-items-center">
-               
-                <div class="container px-md-3 px-sm-0">
-                    
-                    <div class="row wow fadeInUp">
-                        
-                        <div class="col-md-12 mb-4 white-text text-center wow fadeInUp">
+            <div class="mask d-flex justify-content-center align-items-end">
+                <span class="scroll-btn">
 
+                    <a href="#">
+                        <span class="mouse">
+                            <span>
 
-                            <h3 class="animated zoomIn display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5"
-                                id="snell_roundhand">
-                                Josue Arana</h3>
-                            <hr class="hr-light my-4 w-75">
-                            <h4 class="subtext-header mt-2 mb-4">Development: JAVA, HTML, CSS, JavaScript, PHP, Python,
-                                Ocaml, among others.</h4>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+                            </span>
+                        </span>
+                    </a>
+                    <!-- <p>-</p> -->
+                    <p style="margin-left: -25px;">scroll</p>
+
+                </span>
+            </div>
             <!-- Mask & flexbox options-->
         </div>
 
@@ -168,12 +168,14 @@
     <!--Main layout-->
     <main>
         <section id="web-dev" class="text-center py-5" style="background-color: black; align-items: center;">
-            <div class="wow animated zoomInDown col-md-12 mb-4 white-text text-center" style="margin-top:20%">
+            <div class="wow animated zoomInDown col-md-12 mb-4 white-text text-center"
+                style="margin-top:10%; margin-bottom: 20%;">
 
-                <h3 class=" display-3 font-weight-bold grey-text mb-0 pt-md-5 pt-5" id="snell_roundhand">
-                    JOSUE ARANA</h3>
-                <hr class="hr-light my-4 w-75 grey-text">
-                <h4 class="subtext-header mt-2 mb-4 grey-text">Software Engineer/ Developer / Web Designer</h4>
+                <h3 class="animated zoomIn display-3 font-weight-bold white-text mb-0" id="snell_roundhand">
+                    Josue Arana</h3>
+                <hr class="hr-light my-2 w-100 grey-text">
+                <h4 class="subtext-header h3section mt-2 mb-4 grey-text">Software Engineer/ Developer / Web Designer
+                </h4>
             </div>
         </section>
 
@@ -185,7 +187,7 @@
             <div class="container py-5" style="background-color: rgb(0, 0, 0);">
 
                 <!-- Section heading -->
-                <h2 class="h1-responsive font-weight-bold mb-5 wow fadeInUp" style="color: white; opacity: .8;">
+                <h2 class=" font-weight-bold mb-5 wow fadeInUp" style="color: white;">
                     Projects
                 </h2>
                 <!-- Section description -->
@@ -195,7 +197,7 @@
                 <div class="container">
                     <div class="row align-items-center wow fadeInUp">
                         <div class="col-md">
-                            <a href="./web_dev.html">
+                            <a href="./web_dev">
                                 <img class="card-img img-fluid align-center lazyload" data-src="img/web.jpg"
                                     alt=" Image of Web Development Section" width="350px" height="350px" />
                             </a>
@@ -214,7 +216,7 @@
 
                                 <p class="grey-text">
                                     The above are some of the tools I've used and I'm familiar with.</p>
-                                <a href="./web_dev.html" class="btn btn-white btn-sm" style="opacity: .9;">
+                                <a href="./web_dev" class="btn btn-white btn-sm" style="opacity: .9;">
                                     <i class="fa fa-clone left"></i> View Projects</a>
                             </div>
                         </div>
@@ -228,7 +230,7 @@
                 <div class="container">
                     <div class="row align-items-center wow fadeInUp">
                         <div class="col-md">
-                            <a href="./software_dev.html">
+                            <a href="./software_dev">
                                 <div class="overlay align-items-center">
                                     <img class="img-fluid card-img align-center lazyload"
                                         data-src="img/simple_shell.jpg" alt="Card Image of Software Engineering Section"
@@ -251,7 +253,7 @@
                                 <p class="grey-text">
                                     The above are some of the languages I've used in the past and I'm most familiar
                                     with.</p>
-                                <a href="./software_dev.html" class="btn btn-white btn-sm" style="opacity: .9;">
+                                <a href="./software_dev" class="btn btn-white btn-sm" style="opacity: .9;">
                                     <i class="fa fa-clone left"></i> View Projects</a>
                             </div>
                         </div>
@@ -264,7 +266,7 @@
                 <div class="container">
                     <div class="row align-items-center wow fadeInUp">
                         <div class="col-md">
-                            <a href="./artwork.html">
+                            <a href="./artwork">
                                 <div class="overlay align-items-center">
                                     <img class="img-fluid card-img align-center lazyload" data-src="img/rocket2.jpg"
                                         alt="Card Image of Digital Artwork Section" width="350px" height="350px" />
@@ -287,7 +289,7 @@
                                     The above are some of the art and design tools I've used in the past and I'm most
                                     familiar
                                     with.</p>
-                                <a href="./artwork.html" class="btn btn-white btn-sm" style="opacity: .9;">
+                                <a href="./artwork" class="btn btn-white btn-sm" style="opacity: .9;">
                                     <i class="fa fa-clone left"></i> View Art</a>
                             </div>
                         </div>
@@ -303,7 +305,7 @@
 
 
         <section id="quote">
-            <div class="view view-cascade" style="cursor:sw-resize">
+            <div class="view view-cascade" style="cursor:pointer">
                 <img class="card-img-top lazyload" style="height:100%" data-src="img/quote.png"
                     alt="Image with the quote 'If better is possible, good is not enough' by Benjamin Franklyn.">
                 <div id="ripple"
@@ -323,10 +325,10 @@
             <div class="container">
 
                 <!-- Section heading -->
-                <h2 class="h1-responsive font-weight-bold text-center mb-5" style="color: white; opacity: .8;">Let's
+                <h2 id="contact_now_header" class="font-weight-bold text-center mb-5" style="color: white; ">Let's
                     Talk! </h2>
                 <!-- Section description -->
-                <p class="text-center w-responsive mx-auto mb-5"></p>
+                <!-- <p class="text-center w-responsive mx-auto "></p> -->
 
                 <!-- Grid row -->
                 <div class="row">
@@ -399,7 +401,8 @@
 
                             <div class="text-center text-md-left">
                                 <p>
-                                    <button type="submit" class="btn peach-gradient btn-lg">CONTACT NOW</button>
+                                    <button type="submit" id="contact_now" class="btn peach-gradient btn-lg">CONTACT
+                                        NOW</button>
                                 </p>
                             </div>
 
@@ -487,7 +490,7 @@
         <!-- Footer Elements -->
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright - Josue Arana
+        <div class="footer-copyright text-center py-3">© 2021 Copyright - Josue Arana
         </div>
         <!-- Copyright -->
 
@@ -495,24 +498,21 @@
     <!-- Footer -->
 
     <!-- jQuery -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.js"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="./js/mdb.min.js"></script>
+
+
+
     <!-- Custom scripts -->
-    <script src="js/lazysizes.min.js" async></script>
-
-    <script src="js/lightbox-plus-jquery.min.js"></script>
-
+    <script src="./js/lazysizes.min.js" async></script>
+    <script src="./js/lightbox-plus-jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript">
 
-        $(document).ready(function () {
-            new WOW().init();
-        });
 
         function displayGallery() {
             var x = document.getElementById("container2");
@@ -536,6 +536,9 @@
             perturbance: 0.02,
         });
 
+        $(document).ready(function () {
+            new WOW().init();
+        });
 
 
     </script>
