@@ -9,6 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Josue Arana</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187990578-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-187990578-1');
+    </script>
     <!-- MDB icon -->
     <link rel="icon" href="img/logo.ico" type="image/x-icon">
     <!-- Font Awesome -->
@@ -55,14 +64,14 @@
                             <a class="nav-link dropdown-toggle waves-light" id="navbarDropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
                             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="./software_dev">Software Engineering</a>
-                                <a class="dropdown-item" href="./web_dev">Web Development</a>
+                                <a class="dropdown-item" href="./software">Software Engineering</a>
+                                <a class="dropdown-item" href="./web">Web Development</a>
                                 <a class="dropdown-item" href="./artwork">Digital Artwork</a>
                             </div>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./about_me" data-offset="90">About</a>
+                            <a class="nav-link" href="./about" data-offset="90">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./index#contact" data-offset="90">Contact</a>
@@ -102,13 +111,12 @@
     <section id="web-projects" class="text-center py-5" style="background-color: rgb(0, 0, 0);">
 
 
-
-        <div class="container py-5">
+        <div class="container ">
             <!-- Section heading -->
-            <h1 class="h1-responsive font-weight-bold mb-5 wow fadeInLeft" style="color: white; opacity: .8;">
+            <h1 class="h1-responsive font-weight-bold mb-5" style="color: white; opacity: .8;">
                 Digital Artwork
             </h1>
-            <h3 class="h1-responsive font-weight-bold wow fadeInRight" style="color: white; ">
+            <h3 class="h1-responsive font-weight-bold wow fadeInLeft " style="color: white; ">
                 <button class="btn button-code">UNITY</button>
                 <button class="btn button-code">MAYA 3D MODELING</button>
                 <button class="btn button-code">PROCESSING</button>
@@ -116,15 +124,13 @@
                 <button class="btn button-code">Photoshop</button>
                 <button class="btn button-code">Ilustrator</button>
             </h3>
-            <div class="container" style="margin:5px 20px 5px">
+            <div class="container wow fadeInRight" style="margin:5px 20px 5px">
                 <p class="grey-text">
                     It's true that I live and breathe code, but I also do artistic stuff!
                 </p>
             </div>
 
         </div>
-
-
 
 
         <!-- Container -->
@@ -142,8 +148,6 @@
                             height: auto !important;
                         }
                     </style>
-
-
                     <!-- Section description -->
 
                     <!-- Most recent project -->
@@ -182,6 +186,15 @@
                                         <img class="d-block w-100" style="width: 80px; height: 450px; object-fit: cover"
                                             src="artwork/images/1.jpg" alt="First slide">
                                     </div>
+                                    <div class="carousel-item ">
+                                        <video class="video-holo" playsinline autoplay muted loop
+                                            style="width: 280px; height: 450px; object-fit: cover">
+                                            <source src="./artwork/Videos/holov.mp4" type="video/mp4; codecs=avc1"
+                                                alt="video of holograms dancing">
+                                        </video>
+                                        <!-- <img class="d-block w-100" style="width: 80px; height: 450px; object-fit: cover"
+                                                                                src="artwork/images/1.jpg" alt="First slide"> -->
+                                    </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" style="width: 80px; height: 450px; object-fit: cover"
                                             src="artwork/images/2.jpg" alt="Second slide">
@@ -194,10 +207,10 @@
                                         <img class="d-block w-100" style="width: 80px; height: 450px; object-fit: cover"
                                             src="artwork/images/4.jpg" alt="Forth slide">
                                     </div>
-                                    <div class="carousel-item">
+                                    <!-- <div class="carousel-item">
                                         <img class="d-block w-100" style="width: 80px; height: 450px; object-fit: cover"
                                             src="artwork/images/5.jpg" alt="Fifth slide">
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <a class="carousel-control-prev" href="#carousel_project_0" role="button"
                                     data-slide="prev">

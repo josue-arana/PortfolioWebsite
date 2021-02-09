@@ -3,12 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Portfolio Website Josue Arana Software Engineer">
+    <meta name="description" content="Josue Arana Software Engineer Portfolio">
     <meta name="keywords" content="Josue Arana, developer, software, artist, computer science, CS, maryland">
     <meta name="author" content="Josue Arana">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Josue Arana</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187990578-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-187990578-1');
+    </script>
     <!-- MDB icon -->
     <link rel="icon" href="img/logo.ico" type="image/x-icon">
     <!-- Font Awesome -->
@@ -52,14 +61,14 @@
                             <a class="nav-link dropdown-toggle waves-light" id="navbarDropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
                             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="./software_dev">Software Engineering</a>
-                                <a class="dropdown-item" href="./web_dev">Web Development</a>
+                                <a class="dropdown-item" href="./software">Software Engineering</a>
+                                <a class="dropdown-item" href="./web">Web Development</a>
                                 <a class="dropdown-item" href="./artwork">Digital Artwork</a>
                             </div>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./about_me" data-offset="90">About</a>
+                            <a class="nav-link" href="./about" data-offset="90">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact" data-offset="90">Contact</a>
@@ -114,14 +123,6 @@
                     autoplay: true,
                     path: "logo_animation.json"
                 });
-                // end page loader animation 
-                try {
-                    $(window).load(function () {
-                        $(".loader-wrapper").fadeOut("slow");
-                    });
-                } catch (err) {
-                    console.log(err.message);
-                }
             </script>
 
             <!-- <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline
@@ -164,17 +165,27 @@
 
         <!-- Full Page Intro -->
     </header>
+    <script>
+        // end page loader animation 
+        try {
+            $(window).load(function () {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        } catch (err) {
+            console.log(err.message);
+        }
+    </script>
 
     <!--Main layout-->
     <main>
         <section id="web-dev" class="text-center py-5" style="background-color: black; align-items: center;">
-            <div class="wow animated zoomInDown col-md-12 mb-4 white-text text-center"
-                style="margin-top:10%; margin-bottom: 20%;">
+            <div class="col-md-12 mb-4 white-text text-center" style="margin-top:10%; margin-bottom: 20%;">
 
-                <h3 class="animated zoomIn display-3 font-weight-bold white-text mb-0" id="snell_roundhand">
-                    Josue Arana</h3>
+                <h3 class="wow fadeInLeft display-3 font-weight-bold white-text mb-0" id="snell_roundhand">
+                    Josue David Arana</h3>
                 <hr class="hr-light my-2 w-100 grey-text">
-                <h4 class="subtext-header h3section mt-2 mb-4 grey-text">Software Engineer/ Developer / Web Designer
+                <h4 class="wow fadeInRight subtext-header h3section mt-2 mb-4 grey-text">Software Engineer/ Developer /
+                    Web Designer
                 </h4>
             </div>
         </section>
@@ -197,7 +208,7 @@
                 <div class="container">
                     <div class="row align-items-center wow fadeInUp">
                         <div class="col-md">
-                            <a href="./web_dev">
+                            <a href="./web">
                                 <img class="card-img img-fluid align-center lazyload" data-src="img/web.jpg"
                                     alt=" Image of Web Development Section" width="350px" height="350px" />
                             </a>
@@ -216,7 +227,7 @@
 
                                 <p class="grey-text">
                                     The above are some of the tools I've used and I'm familiar with.</p>
-                                <a href="./web_dev" class="btn btn-white btn-sm" style="opacity: .9;">
+                                <a href="./web" class="btn btn-white btn-sm" style="opacity: .9;">
                                     <i class="fa fa-clone left"></i> View Projects</a>
                             </div>
                         </div>
@@ -230,7 +241,7 @@
                 <div class="container">
                     <div class="row align-items-center wow fadeInUp">
                         <div class="col-md">
-                            <a href="./software_dev">
+                            <a href="./software">
                                 <div class="overlay align-items-center">
                                     <img class="img-fluid card-img align-center lazyload"
                                         data-src="img/simple_shell.jpg" alt="Card Image of Software Engineering Section"
@@ -253,7 +264,7 @@
                                 <p class="grey-text">
                                     The above are some of the languages I've used in the past and I'm most familiar
                                     with.</p>
-                                <a href="./software_dev" class="btn btn-white btn-sm" style="opacity: .9;">
+                                <a href="./software" class="btn btn-white btn-sm" style="opacity: .9;">
                                     <i class="fa fa-clone left"></i> View Projects</a>
                             </div>
                         </div>
