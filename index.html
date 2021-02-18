@@ -297,7 +297,7 @@
                                         <button class="btn button-code">UNITY</button>
                                         <button class="btn button-code">MAYA 3D MODELING</button>
                                         <button class="btn button-code">PROCESSING</button>
-                                        <button class="btn button-code">ADOBE SUITE</button>
+                                        <button class="btn button-code ">ADOBE SUITE</button>
                                     </a>
                                 </div>
 
@@ -362,7 +362,7 @@
                                     <div class="md-form mb-0">
                                         <input type="text" name="name" id="contact-name" class="form-control white-text"
                                             required>
-                                        <label for="contact-name" class="">Your name</label>
+                                        <label for="contact-name" class="">Name</label>
                                     </div>
                                 </div>
                                 <!-- Grid column -->
@@ -372,7 +372,7 @@
                                     <div class="md-form mb-0">
                                         <input type="text" name="email" id="contact-email"
                                             class="form-control white-text" required>
-                                        <label for="contact-email" class="">Your email</label>
+                                        <label for="contact-email" class="">Email</label>
                                     </div>
                                 </div>
                                 <!-- Grid column -->
@@ -404,7 +404,7 @@
                                     <div class="md-form">
                                         <textarea type="text" name="message" id="contact-message"
                                             class="form-control md-textarea white-text" rows="3" required></textarea>
-                                        <label for="contact-message">Your message</label>
+                                        <label for="contact-message">Message</label>
                                     </div>
                                 </div>
                                 <!-- Grid column -->
@@ -431,24 +431,37 @@
                     <!-- Grid column -->
                     <div class="col-md-3 text-center">
                         <ul class="list-unstyled mb-0">
+
+                            <style>
+
+                                .orange-hover { 
+                                    color:whitesmoke;
+                                    padding : 5px 10px;
+                                }
+                                .orange-hover:hover { 
+                                    color:white;
+                                    background: linear-gradient(40deg, #ffd86f, #fc6262) !important;
+
+                                }
+                            </style>
                             <li>
                                 <a href="resume.pdf" target="_blank">
-                                    <i class="orange-hover fas fa-file fa-3x mt-3 white-text"></i>
-                                    <p class="orange-hover mb-0 white-text">Resume</p></i>
+                                    <i class="orange-hover 	fa fa-user fa-3x mt-3" data-toggle="tooltip" data-placement="right" title="Resume"></i>
+                                    <!-- <p class="orange-hover mb-0 white-text">Resume</p></i> -->
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://www.linkedin.com/in/josue-arana/" target="_blank">
-                                    <i class="orange-hover fab fa-linkedin fa-3x mt-3  white-text"></i>
-                                    <p class="orange-hover mb-0 white-text">Let's Link up!</p>
+                                <a href="https://www.linkedin.com/in/josue-arana/" target="_blank" data-toggle="tooltip" data-placement="right" title="Connect on LinkedIn">
+                                    <i class="orange-hover fab fa-linkedin fa-3x mt-3"></i>
+                                    <!-- <p class="orange-hover mb-0 white-text">Let's Link up!</p> -->
                                 </a>
                             </li>
 
                             <li>
                                 <a href="mailto:josuee.arana@gmail.com">
-                                    <i class="orange-hover fa fa-envelope fa-3x mt-3 white-text"></i>
-                                    <p class="orange-hover mb-0 white-text">Email Me</p>
+                                    <i class="orange-hover fa fa-envelope fa-3x mt-3" data-placement="right" title="Send Email"></i>
+                                    <!-- <p class="orange-hover mb-0 white-text">Email Me</p> -->
                                 </a>
                             </li>
 
@@ -484,7 +497,7 @@
             <ul class="list-unstyled list-inline text-center">
                 <li class="list-inline-item">
                     <a href="https://www.linkedin.com/in/josue-arana/" class="btn-floating btn-li mx-1" target="_blank">
-                        <i class="fab fa-linkedin"> </i>
+                        <i class="fab fa-linkedin"></i>
                     </a>
                 </li>
                 <li class="list-inline-item">
@@ -555,6 +568,10 @@
         $(document).ready(function () {
             new WOW().init();
         });
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
 
 
     </script>
