@@ -11,8 +11,8 @@
     <meta property="og:title" content="Josue Arana" />
     <meta property="og:image" content="https://www.josuearana.com/img/link_preview.jpg" />
     <meta property="og:description" content="Software Engineer Portfolio" />
-    <meta property="og:url"content="https://www.josuearana.com" />
-    
+    <meta property="og:url" content="https://www.josuearana.com" />
+
     <title>Josue Arana</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187990578-1"></script>
@@ -42,7 +42,7 @@
 
 <body>
     <!-- Main navigation -->
-    <header>
+    <header style="background-color: black;">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container ">
@@ -116,18 +116,23 @@
             <div class="loader-wrapper">
                 <span class="loader"><span class="loader-inner"></span></span>
             </div>
-            <div id="anim" style="height:100%; width:100%; background-color: black">
+
+            <div id="anim" style="height:100%; width:100%;">
                 <script src="lottie.js"></script>
             </div>
+
+
             <script>
                 // intro animation 
                 var animation = bodymovin.loadAnimation({
                     container: document.getElementById('anim'),
                     render: 'svg',
-                    loop: true,
-                    autoplay: true,
+                    // loop: false,
+                    mode: 'scroll',
+                    // autoplay: true,
                     path: "logo_animation.json"
                 });
+
             </script>
 
             <!-- <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline
@@ -149,21 +154,7 @@
                 </div>
             </div> -->
             <!-- Mask & flexbox options-->
-            <div class="mask d-flex justify-content-center align-items-end">
-                <span class="scroll-btn">
 
-                    <a href="#">
-                        <span class="mouse">
-                            <span>
-
-                            </span>
-                        </span>
-                    </a>
-                    <!-- <p>-</p> -->
-                    <p style="margin-left: -25px;">scroll</p>
-
-                </span>
-            </div>
             <!-- Mask & flexbox options-->
         </div>
 
@@ -183,13 +174,30 @@
 
     <!--Main layout-->
     <main>
-        <section id="web-dev" class="text-center py-5" style="background-color: black; align-items: center;">
-            <div class="col-md-12 mb-4 white-text text-center" style="margin-top:10%; margin-bottom: 20%;">
 
-                <h3 class="wow fadeInLeft display-3 font-weight-bold white-text mb-0" id="snell_roundhand">
-                    Josue David Arana</h3>
-                <hr class="hr-light my-2 w-100 grey-text">
-                <h4 class="wow fadeInRight subtext-header h3section mt-2 mb-4 grey-text">Software Engineer/ Developer /
+        <section id="web-dev" class="text-center " style="align-items: center;padding-top:10%;margin-bottom: 0%;">
+            <div class="mask d-flex justify-content-center align-items-end" style="margin-top: -1%;">
+                <span class="scroll-btn">
+
+                    <a href="#">
+                        <span class="mouse">
+                            <span>
+
+                            </span>
+                        </span>
+                    </a>
+                    <!-- <p>-</p> -->
+                    <p style="margin-left: -25px;">scroll</p>
+
+                </span>
+            </div>
+            <div class="col-md-12 mb-4 text-gray" style="padding-top:10%; opacity: 0.65">
+
+                <h3 class="wow fadeInLeft display-3 font-weight-bold mb-0" style="color:#2f2f2f;" id="snell_roundhand">
+                    Josue Arana</h3>
+                <hr class="hr-dark my-2 w-50" style="color:#2f2f2f;">
+                <h4 class="wow fadeInRight subtext-header h3section " style="color:#2f2f2f;">Software Engineer/
+                    Developer /
                     Web Designer
                 </h4>
             </div>
@@ -197,13 +205,13 @@
 
 
         <!--Section: projects-->
-        <section id="projects" class="text-center py-5" style="background-color: rgb(0, 0, 0);">
+        <section id="projects" class="text-center py-5" style="background-color: #fdfdfd">
 
             <!-- Container -->
-            <div class="container py-5" style="background-color: rgb(0, 0, 0);">
+            <div class="container py-5" style="background-color: #fdfdfd">
 
                 <!-- Section heading -->
-                <h2 class=" font-weight-bold mb-5 wow fadeInUp" style="color: white;">
+                <h2 class=" font-weight-bold mb-5 wow fadeInUp" style="color: grey;">
                     Projects
                 </h2>
                 <!-- Section description -->
@@ -212,8 +220,8 @@
                 <!-- Web Development Projects  -->
                 <div class="container">
                     <div class="row align-items-center wow fadeInUp">
-                        <div class="col-md col-sm">
-                            <a href="./web">
+                        <div class="col-md-5 col-sm">
+                            <a href="./web" style="align-self: center;">
                                 <img class="card-img img-fluid align-center lazyload" data-src="img/netflix_cover.png"
                                     alt=" Image of Web Development Section" style="object-fit: cover;" />
                             </a>
@@ -245,12 +253,11 @@
                 <!-- Software Engineering Projects  -->
                 <div class="container">
                     <div class="row align-items-center wow fadeInUp">
-                        <div class="col-md col-sm">
+                        <div class="col-md-5 col-sm">
                             <a href="./software">
                                 <div class="overlay align-items-center">
-                                    <img class="img-fluid card-img align-center lazyload"
-                                        data-src="img/simple_shell.jpg" alt="Card Image of Software Engineering Section"
-                                        style="object-fit: cover;" />
+                                    <img class="img-fluid card-img align-center lazyload" data-src="img/t0.png"
+                                        alt="Card Image of Software Engineering Section" style="object-fit: cover;" />
                                 </div>
                             </a>
                         </div>
@@ -281,11 +288,11 @@
                 <!-- Digital Artwork Project  -->
                 <div class="container">
                     <div class="row align-items-center wow fadeInUp">
-                        <div class="col-md col-sm"  >
+                        <div class="col-md-5 col-sm">
                             <a href="./artwork">
                                 <div class="overlay align-items-center">
                                     <img class="img-fluid card-img align-center lazyload" data-src="img/art_cover.png"
-                                        alt="Card Image of Digital Artwork Section" style="object-fit: cover;"  />
+                                        alt="Card Image of Digital Artwork Section" style="object-fit: cover;" />
                                 </div>
                             </a>
                         </div>
@@ -319,7 +326,6 @@
         <!--Section: projects-->
 
 
-
         <section id="quote">
             <div class="view view-cascade" style="cursor:pointer">
                 <img class="card-img-top lazyload" style="height:100%" data-src="img/quote.png"
@@ -336,12 +342,12 @@
 
 
         <!--Section: contact-->
-        <section id="contact" class="py-5" style="background-color:black">
+        <section id="contact" class="py-5" style="background-color:#fdfdfd">
 
             <div class="container">
 
                 <!-- Section heading -->
-                <h2 id="contact_now_header" class="font-weight-bold text-center mb-5" style="color: white; ">Let's
+                <h2 id="contact_now_header" class="font-weight-bold text-center mb-5" style="color: grey; ">Let's
                     Talk! </h2>
                 <!-- Section description -->
                 <!-- <p class="text-center w-responsive mx-auto "></p> -->
@@ -360,7 +366,7 @@
                                 <!-- Grid column -->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" name="name" id="contact-name" class="form-control white-text"
+                                        <input type="text" name="name" id="contact-name" class="form-control grey-text"
                                             required>
                                         <label for="contact-name" class="">Name</label>
                                     </div>
@@ -371,7 +377,7 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
                                         <input type="text" name="email" id="contact-email"
-                                            class="form-control white-text" required>
+                                            class="form-control grey-text" required>
                                         <label for="contact-email" class="">Email</label>
                                     </div>
                                 </div>
@@ -387,7 +393,7 @@
                                 <div class="col-md-12">
                                     <div class="md-form mb-0">
                                         <input type="text" name="subject" id="contact-Subject"
-                                            class="form-control white-text" required>
+                                            class="form-control grey-text" required>
                                         <label for="contact-Subject" class="">Subject</label>
                                     </div>
                                 </div>
@@ -403,7 +409,7 @@
                                 <div class="col-md-12">
                                     <div class="md-form">
                                         <textarea type="text" name="message" id="contact-message"
-                                            class="form-control md-textarea white-text" rows="3" required></textarea>
+                                            class="form-control md-textarea grey-text" rows="3" required></textarea>
                                         <label for="contact-message">Message</label>
                                     </div>
                                 </div>
@@ -430,43 +436,47 @@
 
                     <!-- Grid column -->
                     <div class="col-md-3 text-center">
-                        <ul class="list-unstyled mb-0">
+                        <div id="contact_media"
+                            class="d-flex flex-lg-column flex-md-column flex-sm-row justify-content-center">
 
                             <style>
-
-                                .orange-hover { 
-                                    color:whitesmoke;
-                                    padding : 5px 10px;
+                                .orange-hover {
+                                    color: grey;
+                                    padding: 5px 10px;
                                 }
-                                .orange-hover:hover { 
-                                    color:white;
-                                    background: linear-gradient(40deg, #ffd86f, #fc6262) !important;
+
+                                .orange-hover:hover {
+                                    color: #fa9c53;
+                                    /* background: linear-gradient(40deg, #ffd86f, #fc6262) !important; */
 
                                 }
                             </style>
-                            <li>
-                                <a href="resume.pdf" target="_blank">
-                                    <i class="orange-hover 	fa fa-user fa-3x mt-3" data-toggle="tooltip" data-placement="right" title="Resume"></i>
-                                    <!-- <p class="orange-hover mb-0 white-text">Resume</p></i> -->
-                                </a>
-                            </li>
+                            <!-- <div> -->
+                            <a href="resume.pdf" target="_blank">
+                                <i class="orange-hover 	fa fa-user fa-3x mt-3" data-toggle="tooltip"
+                                    data-placement="right" title="Resume"></i>
+                                <!-- <p class="orange-hover mb-0 white-text">Resume</p></i> -->
+                            </a>
+                            <!-- </div> -->
 
-                            <li>
-                                <a href="https://www.linkedin.com/in/josue-arana/" target="_blank" data-toggle="tooltip" data-placement="right" title="Connect on LinkedIn">
-                                    <i class="orange-hover fab fa-linkedin fa-3x mt-3"></i>
-                                    <!-- <p class="orange-hover mb-0 white-text">Let's Link up!</p> -->
-                                </a>
-                            </li>
+                            <!-- <div> -->
+                            <a href="https://www.linkedin.com/in/josue-arana/" target="_blank" data-toggle="tooltip"
+                                data-placement="right" title="Connect on LinkedIn">
+                                <i class="orange-hover fab fa-linkedin fa-3x mt-3"></i>
+                                <!-- <p class="orange-hover mb-0 white-text">Let's Link up!</p> -->
+                            </a>
+                            <!-- </div> -->
 
-                            <li>
-                                <a href="mailto:josuee.arana@gmail.com">
-                                    <i class="orange-hover fa fa-envelope fa-3x mt-3" data-placement="right" title="Send Email"></i>
-                                    <!-- <p class="orange-hover mb-0 white-text">Email Me</p> -->
-                                </a>
-                            </li>
+                            <!-- <div> -->
+                            <a href="mailto:josuee.arana@gmail.com">
+                                <i class="orange-hover fa fa-envelope fa-3x mt-3" data-placement="right"
+                                    title="Send Email"></i>
+                                <!-- <p class="orange-hover mb-0 white-text">Email Me</p> -->
+                            </a>
+                            <!-- </div> -->
 
 
-                        </ul>
+                        </div>
 
                     </div>
                     <!-- Grid column -->
@@ -513,6 +523,8 @@
                     </a>
                 </li>
             </ul>
+
+
             <!-- Social buttons -->
 
         </div>
@@ -572,7 +584,13 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
-
+        // end page loader animation 
+        $(window).on("load", function () {
+            $(".loader-wrapper").fadeOut("slow");
+            if ($('.navbar').hasClass('navbar-light')) {
+                $('.navbar').addClass('top-nav-collapse-light');
+            }
+        });
 
     </script>
 

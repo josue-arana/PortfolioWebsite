@@ -39,13 +39,13 @@
     <span class="loader"><span class="loader-inner"></span></span>
 </div>
 
-<body style="background-color: black;">
-    <section style="background-color: black;">
+<body>
+    <section class="bg">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark  fixed-top scrolling-navbar" style="background-color: black;">
-            <div class="container " style="background-color: black;">
+        <nav class="navbar navbar-expand-lg navbar-light  fixed-top scrolling-navbar">
+            <div class="container ">
                 <a class="navbar-brand" href="img/logo_black.png" data-lightbox="example-0" data-title="Logo">
-                    <img src="img/logo_black.ico" width="50px" height="50px" alt="Card image cap">
+                    <img src="img/logo.ico" width="50px" height="50px" alt="Card image cap">
                 </a>
                 <a href="img/logo.png" data-lightbox="example-0" data-title="Logo"></a>
                 <!-- <a class="text-center navbar-brand" href="#">Portfolio</a> -->
@@ -106,12 +106,13 @@
         <!-- Navbar -->
     </section>
     <!--Section: about-->
-    <section id="about" class="py-5" style="margin-top:3%">
+    <section id="about" class="bg py-5" style="margin-top:3%">
 
         <!-- Container -->
         <div class="container">
             <!-- Section heading -->
-            <h2 class="h1-responsive font-weight-bold text-center mb-5" style="color: white; opacity: .8;">About Me</h2>
+            <h2 class=" font-weight-bold text-center mb-5" style="color: grey; ; padding-top: 3rem ; opacity: .8;">About
+                Me</h2>
             <!-- Section description -->
             <p class="lead grey-text text-center w-responsive mx-auto mb-5"></p>
 
@@ -119,7 +120,8 @@
             <div class="row">
 
                 <!-- Grid column -->
-                <div class="col-lg-5 col-md-5 col-sm-12 text-center text-lg-left view overlay rounded z-depth" style="width: 100%;">
+                <div class="col-lg-5 col-md-5 col-sm-12 text-center text-lg-left view overlay rounded z-depth"
+                    style="width: 100%;">
                     <img class="img-fluid card-img" src="artwork/profilepic1.jpg" alt="Photo of Josue">
                     <a>
                         <div class="mask rgba-white-slight"></div>
@@ -165,7 +167,8 @@
                         <div class="col-xl-10 col-md-11 col-10">
                             <h5 class="font-weight-bold mb-3 grey-text" style="text-align: center">Present</h5>
                             <p class="grey-text text-center">Currently doing my last semester as a senior in Computer
-                                Science at UMD. I live and breathe code. I love learning languages and new technologies.</p>
+                                Science at UMD. I live and breathe code. I love learning languages and new technologies.
+                            </p>
                         </div>
                         <!-- Grid column -->
 
@@ -201,7 +204,12 @@
 
         </div>
         <!-- Container -->
-
+        <div class="text-center wow fadeIn" style="padding-top: 4rem;">
+            <p>
+                <button type="button" class="btn peach-gradient btn-lg"> <a class="nav-link white-text"
+                        href="./index#contact" data-offset="90">CONTACT NOW</a></button>
+            </p>
+        </div>
 
     </section>
 
@@ -209,12 +217,7 @@
     <!--Section: about-->
     <!-- Footer -->
     <footer class="page-footer font-small pt-4">
-        <div class="text-center wow fadeIn">
-            <p>
-                <button type="button" class="btn peach-gradient btn-lg"> <a class="nav-link white-text"
-                        href="./index#contact" data-offset="90">CONTACT NOW</a></button>
-            </p>
-        </div>
+
 
         <!-- Footer Elements -->
         <div class="container">
@@ -269,6 +272,9 @@
     // end page loader animation 
     $(window).on("load", function () {
         $(".loader-wrapper").fadeOut("slow");
+        if ($('.navbar').hasClass('navbar-light')) {
+            $('.navbar').addClass('top-nav-collapse-light');
+        }
     });
 </script>
 

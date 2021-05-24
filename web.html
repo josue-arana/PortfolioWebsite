@@ -39,14 +39,14 @@
     <span class="loader"><span class="loader-inner"></span></span>
 </div>
 
-<body style="background-color: black;">
+<body class="bg">
     <!-- Intro section -->
-    <section style="background-color: black;">
+    <section class="bg">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark  fixed-top scrolling-navbar" style="background-color: black;">
-            <div class="container " style="background-color: black;">
+        <nav class="navbar navbar-expand-lg navbar-light  fixed-top scrolling-navbar">
+            <div class="container ">
                 <a class="navbar-brand" href="img/logo_black.png" data-lightbox="example-0" data-title="Logo">
-                    <img src="img/logo_black.ico" width="50px" height="50px" alt="Card image cap">
+                    <img src="img/logo.ico" width="50px" height="50px" alt="Card image cap">
                 </a>
                 <a href="img/logo.png" data-lightbox="example-0" data-title="Logo"></a>
                 <!-- <a class="text-center navbar-brand" href="#">Portfolio</a> -->
@@ -108,16 +108,16 @@
     </section>
 
     <!--Section: projects-->
-    <section id="web-projects" class="text-center py-5" style="background-color: rgb(0, 0, 0);">
+    <section id="web-projects" class="text-center py-5 bg">
 
 
 
         <div class="container py-5">
             <!-- Section heading -->
-            <h1 class="h1-responsive font-weight-bold mb-5 " style="color: white; opacity: .8;">
+            <h1 class=" font-weight-bold mb-4 " style="color: gray; ; padding-top: 3rem;opacity: 0.8;">
                 Web Development Projects
             </h1>
-            <h3 class="h1-responsive font-weight-bold wow fadeInLeft " style="color: white; ">
+            <h3 class="h1-responsive font-weight-bold wow fadeInLeft ">
                 <button class="btn button-code">HTML</button>
                 <button class="btn button-code">CSS</button>
                 <button class="btn button-code">JS</button>
@@ -129,7 +129,7 @@
                 <button class="btn button-code">Figma</button>
                 <button class="btn button-code">Adobe Suite</button>
             </h3>
-            <div class="container wow fadeInRight" style="margin:5px 20px 5px">
+            <div class="container wow fadeInRight" style="padding:1rem">
                 <p class="grey-text">
                     These are some of my web development projects.
                     I'm in the process of updating my projects and I'll
@@ -139,7 +139,7 @@
 
         </div>
         <!-- Container -->
-        <div class="container py-5" style="background-color: rgb(0, 0, 0);">
+        <div class="container py-5">
 
 
 
@@ -153,8 +153,9 @@
                     <!--Featured image-->
                     <div class="overlay align-items-center" sytle="width:400px">
                         <a href="https://netflix-twin-beta.web.app" target="_blank">
-                            <img class="card-img img-fluid align-center lazyload" style="opacity: .8; height:320px; object-fit: cover;"
-                                data-src="img/netflix_twin.jpg" alt="Image of Netflix Twin Project" />
+                            <img class="card-img img-fluid align-center lazyload"
+                                style=" height:320px; object-fit: cover;" data-src="img/netflix_twin.jpg"
+                                alt="Image of Netflix Twin Project" />
                         </a>
                     </div>
                     <!-- Card image -->
@@ -171,7 +172,8 @@
                             </a>
                         </div>
 
-                        <p class="grey-text">Created a copy of Netflix using react components. Used API calls from TMDb to show the latest movie trailers.</p>
+                        <p class="grey-text">Created a copy of Netflix using react components. Used API calls from TMDb
+                            to show the latest movie trailers.</p>
                         <a href="https://github.com/josue-arana/netflix_twin" class="btn peach-gradient btn-sm"
                             style="opacity: .8;" target="_blank">
                             <i class="fa fa-clone left"></i> View Project</a>
@@ -186,8 +188,8 @@
                 <div class="wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-md-0 mb-3">
                     <!--Featured image-->
                     <div class="overlay align-items-center">
-                        <img class="img-fluid card-img align-center lazyload" style="opacity: .8; height:320px; object-fit: cover;"
-                            data-src="img/jawebimg.png" alt="Image of Portfolio Website Project"/>
+                        <img class="img-fluid card-img align-center lazyload" style=" height:320px; object-fit: cover;"
+                            data-src="img/jawebimg.png" alt="Image of Portfolio Website Project" />
                     </div>
                     <!--Excerpt-->
                     <div class="card-body pb-0">
@@ -223,8 +225,9 @@
                     <!--Featured image-->
                     <div class="overlay align-items-center">
                         <a href="https://doris-naturals.netlify.app/" target="_blank">
-                            <img class="card-img img-fluid align-center lazyload" style="opacity: .8; height:320px; object-fit: cover;"
-                                data-src="img/ecomimg.png" alt="Image of E-Commerce Website Project"  />
+                            <img class="card-img img-fluid align-center lazyload"
+                                style=" height:320px; object-fit: cover;" data-src="img/ecomimg.png"
+                                alt="Image of E-Commerce Website Project" />
                         </a>
 
                     </div>
@@ -261,7 +264,7 @@
 
         </div>
         <!-- Container -->
-        <h2 class="h1-responsive font-weight-bold mb-5 wow fadeIn" style="color: white; opacity: .8;">
+        <h2 class="h1-responsive font-weight-bold mb-5 wow fadeIn" style="color: gray; opacity: .8;">
             More coming soon..
         </h2>
         <div class="text-center wow fadeIn">
@@ -339,6 +342,9 @@
     // end page loader animation 
     $(window).on("load", function () {
         $(".loader-wrapper").fadeOut("slow");
+        if ($('.navbar').hasClass('navbar-light')) {
+            $('.navbar').addClass('top-nav-collapse-light');
+        }
     });
 </script>
 

@@ -30,9 +30,9 @@
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="css/mdb.min.css">
     <!-- Your custom styles -->
-    <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/lightbox.min.css"> -->
 </head>
 
@@ -40,14 +40,14 @@
     <span class="loader"><span class="loader-inner"></span></span>
 </div>
 
-<body style="background-color: black;">
+<body>
     <!-- Intro section -->
-    <section style="background-color: black;">
+    <section style="background-color:#fdfdfd">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark  fixed-top scrolling-navbar" style="background-color: black;">
-            <div class="container " style="background-color: black;">
+        <nav class="navbar navbar-expand-lg navbar-light  fixed-top scrolling-navbar">
+            <div class="container" style="height: 800%;">
                 <a class="navbar-brand" href="img/logo_black.png" data-lightbox="example-0" data-title="Logo">
-                    <img src="img/logo_black.ico" width="50px" height="50px" alt="Card image cap">
+                    <img src="img/logo.ico" width="50px" height="50px" alt="Card image cap">
                 </a>
                 <a href="img/logo.png" data-lightbox="example-0" data-title="Logo"></a>
                 <!-- <a class="text-center navbar-brand" href="#">Portfolio</a> -->
@@ -109,28 +109,28 @@
     </section>
 
     <!--Section: projects-->
-    <section id="dev-projects" class="text-center py-5" style="background-color: rgb(0, 0, 0);">
+    <section id="dev-projects" style="background-color: #fdfdfd;;" class="text-center py-5">
 
         <div class="container py-5">
             <!-- Section heading -->
-            <h2 class="h1-responsive font-weight-bold mb-5 " style="color: white; opacity: .8;">
+            <h2 class="font-weight-bold mb-5  " style="color: grey; padding-top: 3rem">
                 Sorftware Engineering Projects
             </h2>
-            <h3 class="h1-responsive font-weight-bold wow fadeInLeft " style="color: white; ">
+            <h3 class="h1-responsive font-weight-bold  wow fadeInLeft " style="color: grey; ">
                 <button class="btn button-code">JAVA</button>
                 <button class="btn button-code">PYTHON</button>
                 <button class="btn button-code">C</button>
                 <button class="btn button-code">C++</button>
+                <button class="btn button-code">SWIFT</button>
                 <button class="btn button-code">PHP</button>
                 <button class="btn button-code">RUBY</button>
                 <button class="btn button-code">OCAML</button>
             </h3>
-            <div class="container wow fadeInRight" style="margin:5px 20px 5px">
+            <div class="container wow fadeInRight" style="padding:1rem">
                 <p class="grey-text">
                     These are some of my software engineering projects.
                     I'm in the process of updating my projects and I'll add more soon.
-                    <br>However, the above are some of the tools I know.
-                    <br>Please note that the projects are private because of the University of Maryland's Computer
+                    <br>Please note that some projects are private because of the University of Maryland's Computer
                     Science
                     policies.
                 </p>
@@ -140,147 +140,230 @@
 
 
         <!-- Container -->
-        <div class="container " style="background-color: rgb(0, 0, 0);">
+        <div class="container ">
+            <!-- Container -->
+            <div class="container py-1">
+                <style>
+                    .video {
+                        /* override other styles to make responsive */
+                        width: 100% !important;
+                        height: auto !important;
+                    }
+                </style>
+                <!-- Section description -->
+                <h2 class="h1-responsive font-weight-bold text-center" style="color: grey; opacity: .8;">
+                    iOS Projects
+                </h2>
+                <!-- Most recent iOS projects -->
+                <!-- <div class="row"> -->
 
-            <!-- Project 3 and 4 row  -->
-            <div class="row text-center py-2">
+                <div class="row justify-content-md-center" style="padding: 2rem; ">
 
-                <!-- Grid column -->
-                <div class="wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-lg-0 mb-3">
-                    <!--Featured image-->
-                    <div class="overlay align-items-center">
-                        <img class="img-fluid card-img align-center lazyload" data-src="img/simple_shell.jpg"
-                            alt="Card Image of Project done in C." width="350px" height="350px" />
-                    </div>
-                    <!-- Card image -->
+                    <div class=" col-lg-12 col-md-12 col-sm-12" style=" width: 100vw;">
+                        <div style=" margin-bottom: 1rem; ">
+                            <video class="video-holo" playsinline autoplay muted loop
+                                style="width:100%; object-fit: cover;  padding:1rem ;">
+                                <source src="./artwork/Videos/triples_mockup2.mp4" type="video/mp4; codecs=avc1"
+                                    alt="video demonstrating functionality of iOS App Tripples">
+                            </video>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="col-lg-6 col-md-6 col-sm-12 " style="margin-top: 0%;align-self: center;"> -->
 
-                    <!--Excerpt-->
-                    <div class="card-body pb-0">
-                        <div>
-                            <a>
-                                <h4 class="font-weight-bold my-3 grey-text">Simple Shell</h4>
-                                <button class="btn button-code">C</button>
+                        <div class="card-body" style="   border-radius: 10px; padding: 2.5%;">
+
+                            <h4 class="font-weight-bold grey-text">Triples</h4>
+                            <button class="btn button-code">SWITF</button>
+                            <button class="btn button-code">SWIFTUI</button>
+                            <button class="btn button-code">UX/UI</button>
+                            <p class="grey-text"></p>
+                            <a href="https://github.com/josue-arana/Triples" class="btn peach-gradient btn-sm"
+                                target="_blank">
+                                <i class="fas fa-code left white-text"> </i>View Project <i
+                                    class="fas fa-code left white-text"></i>
                             </a>
                         </div>
 
-                        <p class="grey-text">
-                            A command line interface based on the Unix Bash shell.
-                            Supports boolean operations, pipes, and file redirection</p>
-                        <a href="https://github.com/josue-arana/ProjectCodeIsPrivate" class="btn peach-gradient btn-sm"
-                            target="_blank" style="opacity: .8;">
-                            <i class="fas fa-code left white-text"> </i>Private <i
-                                class="fas fa-code left white-text"></i>
-                        </a>
                     </div>
-                </div>
-                <!-- Grid column -->
 
-                <!-- Grid column -->
-                <div class="wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-lg-0 mb-3">
-                    <!--Featured image-->
-                    <div class="overlay align-items-center">
-                        <img class="img-fluid card-img align-center lazyload" data-src="img/smallc.jpg"
-                            alt="Card Image of Project done in Ocaml." width="350px" height="350px" />
-                    </div>
-                    <!--Excerpt-->
-                    <div class="card-body pb-0">
-                        <div>
-                            <a>
-                                <h4 class="font-weight-bold my-3 grey-text">Small-C Interpreter</h4>
-                                <button class="btn button-code">OCAML</button>
+                    <!-- </div> -->
+
+                </div>
+                <br>
+                <div class="row justify-content-md-center " style="padding: 2rem;">
+                    <!-- <div class="row justify-content-md-center " style="padding:0%"> -->
+                    <!-- </div> -->
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div style=" margin-bottom: 1rem;">
+                            <video class="" playsinline autoplay muted loop
+                                style="width:100% ;   object-fit: cover;border-radius: 15px;">
+                                <source src="./artwork/Videos/bikedemo3.mp4" type="video/mp4; codecs=avc1"
+                                    alt="video demonstrating functionality of iOS App BikeTraker">
+                            </video>
+                        </div>
+                        <!-- </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12" style="margin-top: 0%;align-self: center;"> -->
+
+                        <div class="card-body" style=" border-radius: 10px; padding: 2.5%;">
+                            <h4 class="font-weight-bold grey-text">Bike Tracker</h4>
+                            <button class="btn button-code">SWITF</button>
+                            <button class="btn button-code">SWIFTUI</button>
+                            <button class="btn button-code">UX/UI</button>
+                            <p class="grey-text"></p>
+                            <a href="https://github.com/josue-arana/bikeTracker" class="btn peach-gradient btn-sm"
+                                target="_blank">
+                                <i class="fas fa-code left white-text"> </i>View Project <i
+                                    class="fas fa-code left white-text"></i>
                             </a>
                         </div>
-                        <p class="grey-text">
-                            Given an input string it allows the user to recognize and run expressions and/or
-                            statements.
-                            corresponding to the input</p>
-                        <a href="https://github.com/josue-arana/ProjectCodeIsPrivate" class="btn peach-gradient btn-sm"
-                            target="_blank" style="opacity: .8;">
-                            <i class="fas fa-code left white-text"> </i>Private <i
-                                class="fas fa-code left white-text"></i>
-                        </a>
+
                     </div>
+
+
                 </div>
-                <!-- Grid column -->
+                <br>
+
+                <!-- </div> -->
+
+                <!-- Project 3 and 4 row  -->
+                <div class="row text-center py-2">
+
+                    <!-- Grid column -->
+                    <div class="wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-lg-0 mb-3">
+                        <!--Featured image-->
+                        <div class="overlay align-items-center">
+                            <img class="img-fluid card-img align-center lazyload" data-src="img/simple_shell.jpg"
+                                alt="Card Image of Project done in C." width="350px" height="350px" />
+                        </div>
+                        <!-- Card image -->
+
+                        <!--Excerpt-->
+                        <div class="card-body pb-0">
+                            <div>
+                                <a>
+                                    <h4 class="font-weight-bold my-3 grey-text">Simple Shell</h4>
+                                    <button class="btn button-code">C</button>
+                                </a>
+                            </div>
+
+                            <p class="grey-text">
+                                A command line interface based on the Unix Bash shell.
+                                Supports boolean operations, pipes, and file redirection</p>
+                            <a href="https://github.com/josue-arana/ProjectCodeIsPrivate"
+                                class="btn peach-gradient btn-sm" target="_blank" style="opacity: .8;">
+                                <i class="fas fa-code left white-text"> </i>Private <i
+                                    class="fas fa-code left white-text"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-lg-0 mb-3">
+                        <!--Featured image-->
+                        <div class="overlay align-items-center">
+                            <img class="img-fluid card-img align-center lazyload" data-src="img/smallc.jpg"
+                                alt="Card Image of Project done in Ocaml." width="350px" height="350px" />
+                        </div>
+                        <!--Excerpt-->
+                        <div class="card-body pb-0">
+                            <div>
+                                <a>
+                                    <h4 class="font-weight-bold my-3 grey-text">Small-C Interpreter</h4>
+                                    <button class="btn button-code">OCAML</button>
+                                </a>
+                            </div>
+                            <p class="grey-text">
+                                Given an input string it allows the user to recognize and run expressions and/or
+                                statements.
+                                corresponding to the input</p>
+                            <a href="https://github.com/josue-arana/ProjectCodeIsPrivate"
+                                class="btn peach-gradient btn-sm" target="_blank" style="opacity: .8;">
+                                <i class="fas fa-code left white-text"> </i>Private <i
+                                    class="fas fa-code left white-text"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Project 3 and 4 row ENDS -->
+
+
+                <br>
+
+                <!-- Project 5 and 6 row  -->
+                <div class="row text-center py-2">
+
+                    <!-- Grid column -->
+                    <div class="wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-lg-0 mb-3">
+                        <!--Featured image-->
+                        <div class="overlay align-items-center">
+
+                            <img class="img-fluid card-img align-center" src="img/nfa.jpg"
+                                alt="Card Image of Second Project done in Ocamel." width="350px" height="350px" />
+                            <!-- <img class="img-fluid card-img align-center" src="img/code3.jpeg" alt="Sample project video" /> -->
+                        </div>
+                        <!--Excerpt-->
+                        <div class="card-body pb-0">
+                            <div>
+                                <a>
+                                    <h4 class="font-weight-bold my-3 grey-text">Regular Expressions Engine</h4>
+                                    <button class="btn button-code">OCAML</button>
+                                </a>
+                            </div>
+                            <p class="grey-text">Handles conversions from NFA to DFA, and regular expressions to NFA</p>
+                            <a href="https://github.com/josue-arana/ProjectCodeIsPrivate"
+                                class="btn peach-gradient btn-sm" target="_blank" style="opacity: .8;">
+                                <i class="fas fa-code left white-text"> </i>Private <i
+                                    class="fas fa-code left white-text"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+
+
+                    <!-- Grid column -->
+                    <div class="wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-lg-0 mb-3">
+                        <!--Featured image-->
+                        <div class="overlay align-items-center">
+                            <img class="img-fluid card-img lazyload" data-src="img/avl.jpg"
+                                alt="Card Image of Project done in Java." width="350px" height="350px" />
+                        </div>
+                        <!--Excerpt-->
+                        <div class="card-body pb-0">
+                            <div>
+                                <a>
+                                    <h4 class="font-weight-bold my-3 grey-text">AVL-G Trees</h4>
+                                    <button class="btn button-code">JAVA</button>
+                                </a>
+                            </div>
+                            <p class="grey-text"> This project represents an <a class="orange-text"
+                                    href="https://en.wikipedia.org/wiki/AVL_tree">AVL Tree</a> with
+                                a relaxed balance condition. Its constructor receives a strictly positive parameter
+                                which controls the maximum
+                                imbalance allowed on any subtree of the tree which it creates.</p>
+                            <a href="https://github.com/josue-arana/ProjectCodeIsPrivate"
+                                class="btn peach-gradient btn-sm" target="_blank" style="opacity: .8;">
+                                <i class="fas fa-code left white-text"> </i>Private <i
+                                    class="fas fa-code left white-text"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+
             </div>
-            <!-- Project 3 and 4 row ENDS -->
-
-
-            <br>
-
-            <!-- Project 5 and 6 row  -->
-            <div class="row text-center py-2">
-
-                <!-- Grid column -->
-                <div class="wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-lg-0 mb-3">
-                    <!--Featured image-->
-                    <div class="overlay align-items-center">
-
-                        <img class="img-fluid card-img align-center" src="img/nfa.jpg"
-                            alt="Card Image of Second Project done in Ocamel." width="350px" height="350px" />
-                        <!-- <img class="img-fluid card-img align-center" src="img/code3.jpeg" alt="Sample project video" /> -->
-                    </div>
-                    <!--Excerpt-->
-                    <div class="card-body pb-0">
-                        <div>
-                            <a>
-                                <h4 class="font-weight-bold my-3 grey-text">Regular Expressions Engine</h4>
-                                <button class="btn button-code">OCAML</button>
-                            </a>
-                        </div>
-                        <p class="grey-text">Handles conversions from NFA to DFA, and regular expressions to NFA</p>
-                        <a href="https://github.com/josue-arana/ProjectCodeIsPrivate" class="btn peach-gradient btn-sm"
-                            target="_blank" style="opacity: .8;">
-                            <i class="fas fa-code left white-text"> </i>Private <i
-                                class="fas fa-code left white-text"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Grid column -->
-
-
-                <!-- Grid column -->
-                <div class="wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-lg-0 mb-3">
-                    <!--Featured image-->
-                    <div class="overlay align-items-center">
-                        <img class="img-fluid card-img lazyload" data-src="img/avl.jpg"
-                            alt="Card Image of Project done in Java." width="350px" height="350px" />
-                    </div>
-                    <!--Excerpt-->
-                    <div class="card-body pb-0">
-                        <div>
-                            <a>
-                                <h4 class="font-weight-bold my-3 grey-text">AVL-G Trees</h4>
-                                <button class="btn button-code">JAVA</button>
-                            </a>
-                        </div>
-                        <p class="grey-text"> This project represents an <a class="orange-text"
-                                href="https://en.wikipedia.org/wiki/AVL_tree">AVL Tree</a> with
-                            a relaxed balance condition. Its constructor receives a strictly positive parameter
-                            which controls the maximum
-                            imbalance allowed on any subtree of the tree which it creates.</p>
-                        <a href="https://github.com/josue-arana/ProjectCodeIsPrivate" class="btn peach-gradient btn-sm"
-                            target="_blank" style="opacity: .8;">
-                            <i class="fas fa-code left white-text"> </i>Private <i
-                                class="fas fa-code left white-text"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Grid column -->
+            <!-- Container -->
+            <h2 class="h1-responsive font-weight-bold mb-5 wow fadeIn" style="color: grey; opacity: .8;">
+                More coming soon..
+            </h2>
+            <div class="text-center wow fadeIn">
+                <p>
+                    <button type="button" class="btn peach-gradient btn-lg"> <a class="nav-link white-text"
+                            href="./index#contact" data-offset="90">CONTACT NOW</a></button>
+                </p>
             </div>
-            <!-- Grid row -->
-
-        </div>
-        <!-- Container -->
-        <h2 class="h1-responsive font-weight-bold mb-5 wow fadeIn" style="color: white; opacity: .8;">
-            More coming soon..
-        </h2>
-        <div class="text-center wow fadeIn">
-            <p>
-                <button type="button" class="btn peach-gradient btn-lg"> <a class="nav-link white-text"
-                        href="./index#contact" data-offset="90">CONTACT NOW</a></button>
-            </p>
-        </div>
 
     </section>
     <!--Section: projects-->
@@ -338,6 +421,7 @@
 <script src="js/lazysizes.min.js" async></script>
 
 <script src="js/lightbox-plus-jquery.min.js"></script>
+<script src="lottie-interactivity.min.js"></script>
 
 <script type="text/javascript">
 
@@ -350,7 +434,12 @@
     // end page loader animation 
     $(window).on("load", function () {
         $(".loader-wrapper").fadeOut("slow");
+        if ($('.navbar').hasClass('navbar-light')) {
+            $('.navbar').addClass('top-nav-collapse-light');
+        }
     });
+
+
 </script>
 
 </html>
