@@ -1865,6 +1865,51 @@ body.bg,
   color: var(--primary-hover);
 }
 
+@media (max-width: 991px) {
+  .navbar .navbar-collapse > .navbar-nav:not(.nav-flex-icons) {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-left: 0;
+    align-items: flex-end;
+  }
+
+  .navbar .navbar-collapse > .navbar-nav:not(.nav-flex-icons) > .nav-item {
+    text-align: right;
+  }
+
+  .navbar .navbar-collapse > .navbar-nav:not(.nav-flex-icons) .nav-link {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .navbar .navbar-collapse .dropdown-menu {
+    width: max-content;
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .navbar .navbar-collapse .dropdown-item {
+    min-height: 2.75rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-align: right;
+  }
+
+  .navbar .navbar-collapse > .nav-flex-icons {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
 .home-page header {
   background-color: var(--page-bg) !important;
 }
