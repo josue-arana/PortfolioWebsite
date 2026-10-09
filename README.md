@@ -22,7 +22,7 @@ This is a static multi-page site and does not require a build command. In the Ne
 - Publish directory: `.`
 - Base directory: leave blank
 
-If Netlify shows context-specific build settings, clear any override that runs `gulp build` or publishes `dist`. The repository `netlify.toml` contains the same root publish configuration and explicit routes for `/about`, `/web`, `/software`, and `/artwork`; trailing-slash variants redirect to the extensionless URLs. The Apache `.htaccess` file and `npm start`/`server.js` are not used by Netlify.
+If Netlify shows context-specific build settings, clear any override that runs `gulp build` or publishes `dist`. The repository `netlify.toml` contains the same root publish configuration and explicit rewrites for `/about`, `/web`, `/software`, and `/artwork`; Netlify handles trailing-slash normalization. The Apache `.htaccess` file and `npm start`/`server.js` are not used by Netlify.
 
 To redeploy, save those settings in Netlify and trigger a new deploy from the connected repository. Confirm the deploy log shows no build step and that the published directory is the repository root. Then check `/`, `/about`, `/web`, `/software`, and `/artwork` directly in the deployed site.
 
