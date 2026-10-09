@@ -2197,17 +2197,163 @@ body.bg,
   outline-color: var(--primary);
 }
 
-.about-page #about {
-  background-color: var(--page-bg) !important;
+/* About page */
+.about-page-main {
+  padding-top: 4.5rem;
+}
+
+.about-page-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.about-page-intro {
+  border-bottom: 1px solid var(--border);
+  background-color: var(--page-bg);
+}
+
+.about-page-intro .about-page-container {
+  padding-top: 3.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.about-back-link {
+  display: inline-flex;
+  margin-bottom: 1.75rem;
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.about-back-link:hover,
+.about-back-link:focus {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.about-page-intro h1 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.about-page-content {
+  background-color: var(--page-bg);
+}
+
+.about-page-content .about-page-container {
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.65fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.about-portrait {
+  width: 100%;
+  max-width: 27rem;
+  justify-self: start;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+.about-current-copy {
+  max-width: 44rem;
+  color: var(--secondary);
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.about-current-copy p {
+  margin: 0 0 1.25rem;
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.about-action {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.about-action-primary,
+.about-action-primary:visited {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.about-action-primary:hover,
+.about-action-primary:focus {
+  border-color: var(--primary-hover);
+  background-color: var(--primary-hover);
+  color: #fff;
+}
+
+.about-action-secondary,
+.about-action-secondary:visited {
+  border-color: var(--border);
+  background-color: var(--surface);
   color: var(--text);
 }
 
-.about-page h2 {
-  color: var(--text) !important;
+.about-action-secondary:hover,
+.about-action-secondary:focus {
+  border-color: var(--primary);
+  background-color: var(--surface);
+  color: var(--primary-hover);
 }
 
-.about-page .about-current-copy {
-  color: var(--secondary);
+.about-action-contact,
+.about-action-contact:visited {
+  min-height: 0;
+  border: 0;
+  background: transparent;
+  color: var(--primary);
+  padding: 0.75rem 0.25rem;
+  text-transform: none;
+}
+
+.about-action-contact:hover {
+  border: 0;
+  background: transparent;
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.about-action-contact:focus {
+  border: 0;
+  background: transparent;
+  color: var(--primary-hover);
 }
 
 .about-page a:focus-visible,
@@ -2216,4 +2362,45 @@ body.bg,
 .about-page .navbar button:focus-visible {
   outline: 3px solid var(--primary);
   outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .about-page-container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .about-page-intro .about-page-container {
+    padding-top: 2.75rem;
+    padding-bottom: 2rem;
+  }
+
+  .about-page-content .about-page-container {
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-portrait {
+    width: min(100%, 22rem);
+    justify-self: center;
+  }
+
+  .about-current-copy {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+
+  .about-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-action {
+    width: 100%;
+  }
 }

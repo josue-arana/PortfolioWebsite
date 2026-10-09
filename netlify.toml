@@ -1,0 +1,59 @@
+[build]
+  command = ""
+  publish = "."
+
+[[redirects]]
+  from = "/about/"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/web/"
+  to = "/web"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/software/"
+  to = "/software"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/artwork/"
+  to = "/artwork"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/web"
+  to = "/web.html"
+  status = 200
+
+[[redirects]]
+  from = "/software"
+  to = "/software.html"
+  status = 200
+
+[[redirects]]
+  from = "/artwork"
+  to = "/artwork.html"
+  status = 200
