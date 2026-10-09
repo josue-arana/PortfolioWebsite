@@ -78,6 +78,26 @@
             </div>
         </section>
 
+        <section class="artwork-identity-section" aria-labelledby="artwork-identity-heading" data-logo-animation-section>
+            <div class="artwork-page-container">
+                <div class="artwork-identity-layout">
+                    <div class="artwork-identity-media">
+                        <div class="artwork-identity-animation" id="artwork-logo-animation" data-logo-animation data-animation-path="/logo_animation.json">
+                            <img class="artwork-identity-fallback" src="img/logo.png" alt="Static ./A personal monogram logo">
+                            <div class="artwork-identity-canvas" data-logo-animation-canvas aria-hidden="true"></div>
+                            <span class="artwork-identity-loader" data-logo-animation-loader aria-hidden="true" hidden></span>
+                        </div>
+                        <button class="artwork-animation-toggle" type="button" data-logo-animation-toggle aria-controls="artwork-logo-animation" aria-pressed="false" disabled hidden>Pause animation</button>
+                    </div>
+                    <div class="artwork-identity-copy">
+                        <h2 id="artwork-identity-heading">Personal Identity</h2>
+                        <h3>./A — Personal Monogram</h3>
+                        <p>A rotating 3D monogram representing my initials, JA, through the form ./A.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="artwork-project-section artwork-3d-section" aria-labelledby="artwork-projects-heading">
             <div class="artwork-page-container">
                 <div class="artwork-section-heading">
@@ -239,40 +259,21 @@
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer font-small pt-4">
-
-        <!-- Footer Elements -->
-        <div class="container">
-
-            <!-- Social buttons -->
-            <ul class="list-unstyled list-inline text-center">
-                <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/josue-arana/" class="btn-floating btn-li mx-1" target="_blank">
-                        <i class="fab fa-linkedin"> </i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://github.com/josue-arana" class="btn-floating btn-github mx-1" target="_blank">
-                        <i class="fab fa-github"> </i>
-                    </a>
-                </li>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.instagram.com/josuearana" class="btn-floating btn-instagram mx-1" target="_blank">
-                        <i class="fab fa-instagram"> </i>
-                    </a>
-                </li>
+    <footer class="page-footer">
+        <div class="footer-container">
+            <nav class="footer-navigation" aria-label="Footer navigation">
+                <a href="/">Home</a>
+                <a href="/#projects">Projects</a>
+                <a href="/about">About</a>
+                <a href="/#contact">Contact</a>
+            </nav>
+            <ul class="footer-social-list" aria-label="Social links">
+                <li><a href="https://www.linkedin.com/in/josue-arana/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/josue-arana" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/josuearana" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
-            <!-- Social buttons -->
-
+            <p class="footer-copyright">© 2026 Josue Arana.</p>
         </div>
-        <!-- Footer Elements -->
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2021 Copyright - Josue Arana
-        </div>
-        <!-- Copyright -->
-
     </footer>
     <!-- Footer -->
 </body>
@@ -282,6 +283,7 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <script src="js/lightbox.js"></script>
+<script src="js/logo-animation-controller.js"></script>
 <script>
     document.querySelectorAll('[data-lightbox-trigger]').forEach(function (trigger) {
         trigger.addEventListener('click', function (event) {
