@@ -39,7 +39,7 @@
     <span class="loader"><span class="loader-inner"></span></span>
 </div>
 
-<body>
+<body class="about-page">
     <section class="bg">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light  fixed-top scrolling-navbar">
@@ -71,6 +71,9 @@
 
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-offset="90">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index#experience" data-offset="90">Experience</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./index#contact" data-offset="90">Contact</a>
@@ -111,102 +114,27 @@
         <!-- Container -->
         <div class="container">
             <!-- Section heading -->
-            <h2 class=" font-weight-bold text-center mb-5" style="color: grey; ; padding-top: 3rem ; opacity: .8;">About
+            <h2 class=" font-weight-bold text-center mb-5" style="color: var(--text); padding-top: 3rem;">About
                 Me</h2>
-            <!-- Section description -->
-            <p class="lead grey-text text-center w-responsive mx-auto mb-5"></p>
-
-            <!-- Grid row -->
-            <div class="row">
-
-                <!-- Grid column -->
-                <div class="col-lg-5 col-md-5 col-sm-12 text-center text-lg-left view overlay rounded z-depth"
-                    style="width: 100%;">
+            <div class="row align-items-center about-current-layout">
+                <div class="col-lg-5 col-md-5 col-sm-12 text-center text-lg-left view overlay rounded z-depth">
                     <img class="img-fluid card-img" src="artwork/profilepic1.jpg" alt="Photo of Josue">
                     <a>
                         <div class="mask rgba-white-slight"></div>
                     </a>
                 </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-7 col-md-7 col-sm-12">
-
-                    <!-- Grid row -->
-                    <div class="row mb-3" style="padding-top:30px">
-
-                        <!-- Grid column -->
-                        <div class="col-1">
-                            <i class="fa fa-mail-forward fa-lg blue-text"></i>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-xl-10 col-md-11 col-10 py-2">
-                            <h5 class="font-weight-bold mb-3 grey-text" style="text-align: center">Past</h5>
-                            <p class="grey-text">I was born and raised in Guatemala City, Guatemala.
-                                At age 18, I moved to the United States. I obtained my Associate at
-                                Montgomery College and then transferred to the University of Maryland at College Park
-                                (UMD).</p>
-                        </div>
-                        <!-- Grid column -->
-
-                    </div>
-                    <!-- Grid row -->
-
-                    <!-- Grid row -->
-                    <div class="row mb-3">
-
-                        <!-- Grid column -->
-                        <div class="col-1">
-                            <i class="fa fa-mail-forward fa-lg blue-text"></i>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-xl-10 col-md-11 col-10">
-                            <h5 class="font-weight-bold mb-3 grey-text" style="text-align: center">Present</h5>
-                            <p class="grey-text text-center">Currently doing my last semester as a senior in Computer
-                                Science at UMD. I live and breathe code. I love learning languages and new technologies.
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                    </div>
-                    <!-- Grid row -->
-
-                    <!--Grid row-->
-                    <div class="row">
-
-                        <!-- Grid column -->
-                        <div class="col-1">
-                            <i class="fa fa-mail-forward fa-lg blue-text"></i>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-xl-10 col-md-11 col-10">
-                            <h5 class="font-weight-bold mb-3 grey-text" style="text-align: center">Future</h5>
-                            <p class="grey-text mb-0">I'm graduating on May 2021 from the University of Maryland. I want
-                                to work
-                                and learn from the best companies as a Software Engineer.</p>
-                        </div>
-                        <!-- Grid column -->
-
-                    </div>
-                    <!--Grid row-->
-
+                <div class="col-lg-7 col-md-7 col-sm-12 about-current-copy">
+                    <p>I’m Josue Arana, a software engineer based in Maryland with a B.S. in Computer Science from the University of Maryland. Since June 2021, I’ve worked at Fannie Mae building and supporting Salesforce applications and customer-facing experiences.</p>
+                    <p>My work spans Apex, Lightning Web Components, Experience Cloud, Flows, and OmniStudio, along with release management, production support, code reviews, and mentoring.</p>
+                    <p>Alongside engineering, I enjoy website and graphic design. I bring that interest in clear, usable design to the applications I build. I speak English, Spanish, and Portuguese.</p>
                 </div>
-                <!--Grid column-->
-
             </div>
-            <!-- Grid row -->
 
         </div>
         <!-- Container -->
         <div class="text-center wow fadeIn" style="padding-top: 4rem;">
             <p>
-                <button type="button" class="btn peach-gradient btn-lg"> <a class="nav-link white-text"
+                <button type="button" class="btn theme-primary-button btn-lg"> <a class="nav-link white-text"
                         href="./index#contact" data-offset="90">CONTACT NOW</a></button>
             </p>
         </div>
@@ -257,7 +185,6 @@
 
 <!-- jQuery -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="js/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
@@ -265,9 +192,8 @@
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- Custom scripts -->
+<script src="js/lightbox.js"></script>
 <script src="js/lazysizes.min.js" async></script>
-
-<script src="js/lightbox-plus-jquery.min.js"></script>
 <script>
     // end page loader animation 
     $(window).on("load", function () {

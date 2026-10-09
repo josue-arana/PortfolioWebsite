@@ -3,9 +3,9 @@
   "version": "1.0.0",
   
   "description": "artwork",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
  },
   "author": "Josue Arana",
   "license": "ISC",

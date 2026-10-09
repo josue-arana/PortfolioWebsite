@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Josue Arana Software Engineer Portfolio">
+    <meta name="description" content="Explore Josue Arana’s web development portfolio, featuring client websites, personal projects, and interface development.">
     <meta name="keywords" content="Josue Arana, developer, software, artist, computer science, CS, maryland">
     <meta name="author" content="Josue Arana">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Josue Arana</title>
+    <title>Web Development Projects | Josue Arana</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187990578-1"></script>
     <script>
@@ -35,11 +35,7 @@
     <!-- <link rel="stylesheet" href="css/lightbox.min.css"> -->
 </head>
 
-<div class="loader-wrapper">
-    <span class="loader"><span class="loader-inner"></span></span>
-</div>
-
-<body class="bg">
+<body class="web-page bg">
     <!-- Intro section -->
     <section class="bg">
         <!-- Navbar -->
@@ -65,13 +61,16 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
                             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="./software">Software Engineering</a>
-                                <a class="dropdown-item" href="./web">Web Development</a>
+                        <a class="dropdown-item" href="./web" aria-current="page">Web Development</a>
                                 <a class="dropdown-item" href="./artwork">Digital Artwork</a>
                             </div>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="./about" data-offset="90">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index#experience" data-offset="90">Experience</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./index#contact" data-offset="90">Contact</a>
@@ -81,22 +80,22 @@
                     <ul class="navbar-nav nav-flex-icons">
 
                         <li class="nav-item">
-                            <a href="resume.pdf" class="nav-link" target="_blank">
+                            <a href="resume.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">
                                 <span class="tooltiptext">Resume</span></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://www.linkedin.com/in/josue-arana/" class="nav-link" target="_blank">
+                            <a href="https://www.linkedin.com/in/josue-arana/" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin light-green-text-2"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://github.com/josue-arana" class="nav-link" target="_blank">
+                            <a href="https://github.com/josue-arana" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                 <i class="fab fa-github light-green-text-2"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://www.instagram.com/josuearana" class="nav-link" target="_blank">
+                            <a href="https://www.instagram.com/josuearana" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <i class="fab fa-instagram light-green-text-2"></i>
                             </a>
                         </li>
@@ -107,174 +106,103 @@
         <!-- Navbar -->
     </section>
 
-    <!--Section: projects-->
-    <section id="web-projects" class="text-center py-5 bg">
-
-
-
-        <div class="container py-5">
-            <!-- Section heading -->
-            <h1 class=" font-weight-bold mb-4 " style="color: gray; ; padding-top: 3rem;opacity: 0.8;">
-                Web Development Projects
-            </h1>
-            <h3 class="h1-responsive font-weight-bold wow fadeInLeft ">
-                <button class="btn button-code">HTML</button>
-                <button class="btn button-code">CSS</button>
-                <button class="btn button-code">JS</button>
-                <button class="btn button-code">React</button>
-                <button class="btn button-code">Webflow</button>
-                <button class="btn button-code">Bootstrap</button>
-                <button class="btn button-code">WordPress</button>
-                <button class="btn button-code">MAYA 3D</button>
-                <button class="btn button-code">Figma</button>
-                <button class="btn button-code">Adobe Suite</button>
-            </h3>
-            <div class="container wow fadeInRight" style="padding:1rem">
-                <p class="grey-text">
-                    These are some of my web development projects.
-                    I'm in the process of updating my projects and I'll
-                    add more soon. <br>However, the above are some of the tools I know.
-                </p>
+    <main id="web-projects" class="web-page-main">
+        <section class="web-page-intro" aria-labelledby="web-page-title">
+            <div class="web-page-container">
+                <a class="web-back-link" href="/#projects">← Back to Projects</a>
+                <h1 id="web-page-title">Web Development</h1>
+                <p>A selection of websites and interfaces, including client work, personal projects, and earlier explorations in web development.</p>
             </div>
+        </section>
 
-        </div>
-        <!-- Container -->
-        <div class="container py-5">
-
-
-
-            <!-- Project 1 and 2 row -->
-            <div class="row text-center py-2">
-
-
-
-                <!-- 1 -->
-                <div class=" wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-lg-0 mb-3">
-                    <!--Featured image-->
-                    <div class="overlay align-items-center" sytle="width:400px">
-                        <a href="https://netflix-twin-beta.web.app" target="_blank">
-                            <img class="card-img img-fluid align-center lazyload"
-                                style=" height:320px; object-fit: cover;" data-src="img/netflix_twin.jpg"
-                                alt="Image of Netflix Twin Project" />
-                        </a>
-                    </div>
-                    <!-- Card image -->
-
-                    <!--Excerpt-->
-                    <div class="card-body pb-0">
-                        <div>
-                            <a>
-                                <h4 class="font-weight-bold my-3 grey-text">Netflix Twin</h4>
-                                <button class="btn button-code">REACT</button>
-                                <button class="btn button-code">CSS</button>
-                                <button class="btn button-code">JAVASCRIPT</button>
-                                <button class="btn button-code">FIREBASE</button>
-                            </a>
+        <section class="web-projects-section" aria-labelledby="web-projects-heading">
+            <div class="web-page-container">
+                <h2 id="web-projects-heading" class="sr-only">Web development projects</h2>
+                <div class="web-project-grid">
+                    <article class="web-project-card">
+                        <div class="web-project-image">
+                            <img src="img/msd_web.PNG" width="2356" height="1336" loading="lazy" alt="Screenshot of the contractor website project">
                         </div>
-
-                        <p class="grey-text">Created a copy of Netflix using react components. Used API calls from TMDb
-                            to show the latest movie trailers.</p>
-                        <a href="https://github.com/josue-arana/netflix_twin" class="btn peach-gradient btn-sm"
-                            style="opacity: .8;" target="_blank">
-                            <i class="fa fa-clone left"></i> View Project</a>
-                        <a href="https://netflix-twin-beta.web.app" class="btn peach-gradient btn-sm"
-                            style="opacity: .8;" target="_blank">
-                            <i class="fa fa-clone left"></i> Visit Website</a>
-                    </div>
-                </div>
-                <!-- P1 Ends -->
-
-                <!-- P2 -->
-                <div class="wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-md-0 mb-3">
-                    <!--Featured image-->
-                    <div class="overlay align-items-center">
-                        <img class="img-fluid card-img align-center lazyload" style=" height:320px; object-fit: cover;"
-                            data-src="img/jawebimg.png" alt="Image of Portfolio Website Project" />
-                    </div>
-                    <!--Excerpt-->
-                    <div class="card-body pb-0">
-                        <div>
-                            <a>
-                                <h4 class="font-weight-bold my-3 grey-text">Portfolio Website</h4>
-                                <button class="btn button-code">HTML</button>
-                                <button class="btn button-code">CSS</button>
-                                <button class="btn button-code">JAVASCRIPT</button>
-                                <button class="btn button-code">JQUERY</button>
-                                <button class="btn button-code">Bootstrap</button>
-                            </a>
+                        <div class="web-project-content">
+                            <h3>Contractor Website</h3>
+                            <p>Developed a website for a remodeling company with Bootstrap.</p>
+                            <ul class="web-project-tags" aria-label="Technologies used">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                            <div class="web-project-actions">
+                                <a href="https://www.skinnerdivisioncontractor.com/" target="_blank" rel="noopener noreferrer">View Website <span aria-hidden="true">↗</span></a>
+                            </div>
                         </div>
-                        <p class="grey-text">
-                            Created my own portfolio website using bootstrap.</p>
-                        <a href="https://github.com/josue-arana/PortfolioWebsite" class="btn peach-gradient btn-sm"
-                            style="opacity: .8;" target="_blank"><i class="fa fa-clone left"></i> View Project
-                        </a>
-                    </div>
+                    </article>
+
+                    <article class="web-project-card">
+                        <div class="web-project-image">
+                            <img src="img/netflix_twin.jpg" width="1112" height="827" loading="lazy" alt="Screenshot of the Netflix Twin recreation project">
+                        </div>
+                        <div class="web-project-content">
+                            <h3>Netflix Twin</h3>
+                            <p>A practice recreation of a Netflix-style interface built with React components and TMDb API calls for movie trailers.</p>
+                            <ul class="web-project-tags" aria-label="Technologies used">
+                                <li>React</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Firebase</li>
+                            </ul>
+                            <div class="web-project-actions">
+                                <a href="https://netflix-twin-beta.web.app" target="_blank" rel="noopener noreferrer">View Website <span aria-hidden="true">↗</span></a>
+                                <a href="https://github.com/josue-arana/netflix_twin" target="_blank" rel="noopener noreferrer">View Source <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="web-project-card">
+                        <div class="web-project-image">
+                            <img src="img/jawebimg.png" width="1000" height="716" loading="lazy" alt="Screenshot of the original portfolio website design">
+                        </div>
+                        <div class="web-project-content">
+                            <h3>Portfolio Website</h3>
+                            <p>The screenshot shows the original portfolio design, built with Bootstrap and the technologies below.</p>
+                            <ul class="web-project-tags" aria-label="Technologies used">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                            <div class="web-project-actions">
+                                <a href="https://github.com/josue-arana/PortfolioWebsite" target="_blank" rel="noopener noreferrer">View Source <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="web-project-card">
+                        <div class="web-project-image">
+                            <img src="img/ecomimg.png" width="2236" height="1536" loading="lazy" alt="Screenshot of the Doris Naturals e-commerce website">
+                        </div>
+                        <div class="web-project-content">
+                            <h3>E-Commerce Website / Doris Naturals</h3>
+                            <p>An e-commerce page for personal care products implemented with Bootstrap.</p>
+                            <ul class="web-project-tags" aria-label="Technologies used">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                            <div class="web-project-actions">
+                                <a href="https://doris-naturals.netlify.app/" target="_blank" rel="noopener noreferrer">View Website <span aria-hidden="true">↗</span></a>
+                                <a href="https://github.com/josue-arana/Doris_naturals" target="_blank" rel="noopener noreferrer">View Source <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <!-- P2 ends -->
             </div>
-            <!-- Project 1 and 2 row ENDS -->
-            <br>
-
-            <!-- Project 1 and 2 row -->
-            <div class="row text-center py-2">
-
-
-
-                <!-- 1 -->
-                <div class=" wow fadeIn col-lg-6 col-md-6 col-sm-12 mb-lg-0 mb-3">
-                    <!--Featured image-->
-                    <div class="overlay align-items-center">
-                        <a href="https://doris-naturals.netlify.app/" target="_blank">
-                            <img class="card-img img-fluid align-center lazyload"
-                                style=" height:320px; object-fit: cover;" data-src="img/ecomimg.png"
-                                alt="Image of E-Commerce Website Project" />
-                        </a>
-
-                    </div>
-                    <!-- Card image -->
-
-                    <!--Excerpt-->
-                    <div class="card-body pb-0">
-                        <div>
-                            <a>
-                                <h4 class="font-weight-bold my-3 grey-text">E-Commerce Website</h4>
-                                <button class="btn button-code">HTML</button>
-                                <button class="btn button-code">CSS</button>
-                                <button class="btn button-code">JAVASCRIPT</button>
-                                <button class="btn button-code">JQUERY</button>
-                                <button class="btn button-code">Bootstrap</button>
-                            </a>
-                        </div>
-
-                        <p class="grey-text">
-                            E-commerce page to sell personal care products implemented with bootstrap.</p>
-                        <a href="https://github.com/josue-arana/Doris_naturals" class="btn peach-gradient btn-sm"
-                            style="opacity: .8;" target="_blank">
-                            <i class="fa fa-clone left"></i> View Project</a>
-                        <a href="https://doris-naturals.netlify.app/" class="btn peach-gradient btn-sm"
-                            style="opacity: .8;" target="_blank">
-                            <i class="fa fa-clone left"></i> Go to Website</a>
-                    </div>
-                </div>
-                <!-- P1 Ends -->
-
-            </div>
-            <!-- Project 1 and 2 row ENDS -->
-            <br>
-
-        </div>
-        <!-- Container -->
-        <h2 class="h1-responsive font-weight-bold mb-5 wow fadeIn" style="color: gray; opacity: .8;">
-            More coming soon..
-        </h2>
-        <div class="text-center wow fadeIn">
-            <p>
-                <button type="button" class="btn peach-gradient btn-lg"> <a class="nav-link white-text"
-                        href="./index#contact" data-offset="90">CONTACT NOW</a></button>
-            </p>
-        </div>
-
-    </section>
+        </section>
+    </main>
     <!--Section: projects-->
 
     <!-- Footer -->
@@ -286,19 +214,19 @@
             <!-- Social buttons -->
             <ul class="list-unstyled list-inline text-center">
                 <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/josue-arana/" class="btn-floating btn-li mx-1" target="_blank">
+                    <a href="https://www.linkedin.com/in/josue-arana/" class="btn-floating btn-li mx-1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"> </i>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="https://github.com/josue-arana" class="btn-floating btn-github mx-1" target="_blank">
+                    <a href="https://github.com/josue-arana" class="btn-floating btn-github mx-1" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <i class="fab fa-github"> </i>
                     </a>
                 </li>
                 </li>
                 <li class="list-inline-item">
                     <a href="https://www.instagram.com/josuearana" class="btn-floating btn-instagram mx-1"
-                        target="_blank">
+                        target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="fab fa-instagram"> </i>
                     </a>
                 </li>
@@ -319,7 +247,6 @@
 
 <!-- jQuery -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="js/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
@@ -327,21 +254,11 @@
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- Custom scripts -->
+<script src="js/lightbox.js"></script>
 <script src="js/lazysizes.min.js" async></script>
 
-<script src="js/lightbox-plus-jquery.min.js"></script>
-
-<script type="text/javascript">
-
-    $(document).ready(function () {
-        new WOW().init();
-    });
-</script>
-
 <script>
-    // end page loader animation 
     $(window).on("load", function () {
-        $(".loader-wrapper").fadeOut("slow");
         if ($('.navbar').hasClass('navbar-light')) {
             $('.navbar').addClass('top-nav-collapse-light');
         }

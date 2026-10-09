@@ -40,15 +40,15 @@
 </head>
 
 
-<body>
+<body class="home-page">
     <!-- Main navigation -->
-    <header style="background-color: black;">
+    <header style="background-color: var(--page-bg);">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar">
             <div class="container ">
                 <a class="navbar-brand" href="img/logo_black.png" data-lightbox="example-0"
                     data-title="Logo: Formed by the characters ' . / A ' where the dot and the slash give the illusion of a J. Next to an A to show my initials.">
-                    <img src="img/logo_black.ico" width="50px" height="50px" alt="Josue Arana's Logo">
+                            <img src="img/logo.ico" width="50px" height="50px" alt="Josue Arana's Logo">
                 </a>
                 <a href="img/logo.png" data-lightbox="example-0" data-title="Logo"></a>
                 <!-- <a class="text-center navbar-brand" href="#">Portfolio</a> -->
@@ -74,6 +74,9 @@
 
                         <li class="nav-item">
                             <a class="nav-link" href="./about" data-offset="90">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience" data-offset="90">Experience</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact" data-offset="90">Contact</a>
@@ -111,219 +114,156 @@
 
         <!-- Full Page Intro -->
 
-        <div id="intro-section" class="view">
-
-            <div class="loader-wrapper">
-                <span class="loader"><span class="loader-inner"></span></span>
-            </div>
-
-            <div id="anim" style="height:100%; width:100%;">
-                <script src="lottie.js"></script>
-            </div>
-
-
-            <script>
-                // intro animation 
-                var animation = bodymovin.loadAnimation({
-                    container: document.getElementById('anim'),
-                    render: 'svg',
-                    // loop: false,
-                    mode: 'scroll',
-                    // autoplay: true,
-                    path: "logo_animation.json"
-                });
-
-            </script>
-
-            <!-- <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline
-                autoplay muted loop>
-                <source src="./artwork/Videos/mov1.mp4" type="video/mp4; codecs=avc1">
-                <source src="./artwork/Videos/mov1.mpg" type="video/mp4; codecs=mpeg">
-                <source src="./artwork/Videos/mov1.avi" type="video/avi; codecs=hevc">
-                <source src="./artwork/Videos/io_ghost.webm" type="video/webm">
-            </video> -->
-            <!-- <div id="ripple"
-                style=" display: none; height:100%; Width: 100%; position: absolute; left: 0%; top: 0%; right: 0%; bottom: 0%; background: url(/artwork/back3-min.png) left top / cover;">
-                <div class="col-md-12 mb-4 white-text text-center wow fadeInUp align-items-center" id="hero-content">
-                
-                
-                    <h3 class="h3section animated zoomIn display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5" style="margin-top:250px; margin-bottom:250px" id="snell_roundhand">
-                        Josue Arana</h3>
-                    <hr class="hr-light my-4 w-75">
-                    <h4 class="subtext-header mt-2 mb-4">Software Engineer/ Developer / Web Designer</h4>
+        <section id="intro-section" class="view" aria-labelledby="hero-title">
+            <div class="container hero-inner">
+                <div class="hero-layout">
+                    <div class="hero-copy">
+                        <h1 id="hero-title">Josue Arana</h1>
+                        <p class="hero-role"><span class="hero-role-group">Software Engineer <span aria-hidden="true">|</span></span> <span class="hero-role-group">Salesforce Developer</span></p>
+                        <p class="hero-introduction">I build business applications and customer-facing experiences with Salesforce, Apex, Lightning Web Components, and modern web technologies.</p>
+                        <div class="hero-actions">
+                            <a class="hero-button hero-button-primary" href="#projects">View Projects <span aria-hidden="true">→</span></a>
+                            <a class="hero-button hero-button-secondary" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-animation-frame" id="hero-animation-frame">
+                            <img id="hero-logo-fallback" src="img/logo.png" alt="JA logo" />
+                            <div id="anim" aria-hidden="true"></div>
+                            <span id="hero-animation-loader" class="hero-animation-loader" aria-hidden="true"></span>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
-            <!-- Mask & flexbox options-->
-
-            <!-- Mask & flexbox options-->
-        </div>
+            </div>
+        </section>
 
 
         <!-- Full Page Intro -->
     </header>
-    <script>
-        // end page loader animation 
-        try {
-            $(window).load(function () {
-                $(".loader-wrapper").fadeOut("slow");
-            });
-        } catch (err) {
-            console.log(err.message);
-        }
-    </script>
-
     <!--Main layout-->
     <main>
 
-        <section id="web-dev" class="text-center " style="align-items: center;padding-top:10%;margin-bottom: 0%;">
-            <div class="mask d-flex justify-content-center align-items-end" style="margin-top: -1%;">
-                <span class="scroll-btn">
-
-                    <a href="#">
-                        <span class="mouse">
-                            <span>
-
-                            </span>
-                        </span>
-                    </a>
-                    <!-- <p>-</p> -->
-                    <p style="margin-left: -25px;">scroll</p>
-
-                </span>
-            </div>
-            <div class="col-md-12 mb-4 text-gray" style="padding-top:10%; opacity: 0.65">
-
-                <h3 class="wow fadeInLeft display-3 font-weight-bold mb-0" style="color:#2f2f2f;" id="snell_roundhand">
-                    Josue Arana</h3>
-                <hr class="hr-dark my-2 w-50" style="color:#2f2f2f;">
-                <h4 class="wow fadeInRight subtext-header h3section " style="color:#2f2f2f;">Software Engineer/
-                    Developer /
-                    Web Designer
-                </h4>
+        <section id="experience" class="home-section home-experience">
+            <div class="container">
+                <div class="home-section-heading">
+                    <h2>Professional Experience</h2>
+                </div>
+                <div class="experience-layout">
+                    <article class="experience-entry">
+                        <div class="experience-heading">
+                            <h3>Software Engineer – Associate</h3>
+                            <p>Fannie Mae <span aria-hidden="true">·</span> June 2021–Present</p>
+                        </div>
+                        <p class="experience-summary">I develop and support Salesforce applications and customer-facing experiences, combining custom development, declarative automation, and reliable release practices.</p>
+                        <ul class="experience-accomplishments">
+                            <li>Build customer-facing Experience Cloud workflows using Lightning Web Components, Apex, and Salesforce Flows.</li>
+                            <li>Develop guided experiences and integrations with OmniScripts, FlexCards, Integration Procedures, and DataRaptors/DataMappers.</li>
+                            <li>Configure custom objects, fields, layouts, validation rules, and access controls to support business processes.</li>
+                            <li>Support biweekly releases and production issues, review code, and mentor teammates.</li>
+                        </ul>
+                    </article>
+                    <aside class="expertise-groups" aria-labelledby="expertise-heading">
+                        <h3 id="expertise-heading">Technical Expertise</h3>
+                        <div class="expertise-group">
+                            <h4>Development</h4>
+                            <p>Apex, Lightning Web Components, SOQL/SOSL</p>
+                        </div>
+                        <div class="expertise-group">
+                            <h4>Platform &amp; Automation</h4>
+                            <p>Experience Cloud, Salesforce Flows, OmniStudio</p>
+                        </div>
+                        <div class="expertise-group">
+                            <h4>Delivery &amp; Quality</h4>
+                            <p>Git, GitLab CI/CD, Jenkins, Java/Selenium/Cucumber, ACCELQ</p>
+                        </div>
+                    </aside>
+                </div>
             </div>
         </section>
 
-
-        <!--Section: projects-->
-        <section id="projects" class="text-center py-5" style="background-color: #fdfdfd">
-
-            <!-- Container -->
-            <div class="container py-5" style="background-color: #fdfdfd">
-
-                <!-- Section heading -->
-                <h2 class=" font-weight-bold mb-5 wow fadeInUp" style="color: grey;">
-                    Projects
-                </h2>
-                <!-- Section description -->
-                <br>
-
-                <!-- Web Development Projects  -->
-                <div class="container">
-                    <div class="row align-items-center wow fadeInUp">
-                        <div class="col-md-5 col-sm">
-                            <a href="./web" style="align-self: center;">
-                                <img class="card-img img-fluid align-center lazyload" data-src="img/netflix_cover.png"
-                                    alt=" Image of Web Development Section" style="object-fit: cover;" />
-                            </a>
-                        </div>
-                        <div class="col-md col-sm">
-                            <div class="card-body  align-center">
-                                <div>
-                                    <a>
-                                        <h4 class="font-weight-bold my-3 grey-text">Web Development</h4>
-                                        <button class="btn button-code">HTML</button>
-                                        <button class="btn button-code">CSS</button>
-                                        <button class="btn button-code">JS</button>
-                                        <button class="btn button-code">React</button>
-                                    </a>
-                                </div>
-
-                                <p class="grey-text">
-                                    The above are some of the tools I've used and I'm familiar with.</p>
-                                <a href="./web" class="btn btn-white btn-sm" style="opacity: .9;">
-                                    <i class="fa fa-clone left"></i> View Projects</a>
-                            </div>
-                        </div>
-                    </div>
+        <section id="certifications" class="home-section home-certifications">
+            <div class="container">
+                <div class="home-section-heading">
+                    <h2>Certifications</h2>
                 </div>
-
-
-                <br>
-
-                <!-- Software Engineering Projects  -->
-                <div class="container">
-                    <div class="row align-items-center wow fadeInUp">
-                        <div class="col-md-5 col-sm">
-                            <a href="./software">
-                                <div class="overlay align-items-center">
-                                    <img class="img-fluid card-img align-center lazyload" data-src="img/t0.png"
-                                        alt="Card Image of Software Engineering Section" style="object-fit: cover;" />
-                                </div>
-                            </a>
+                <div class="certification-list">
+                    <article class="certification-item">
+                        <div class="certification-image-box">
+                            <img src="img/certifications/salesforce-certified-platform-administrator.png" width="120" height="120" alt="Salesforce Certified Platform Administrator badge">
                         </div>
-                        <div class="col-md col-sm">
-                            <div class="card-body  align-center">
-                                <div>
-                                    <a>
-                                        <h4 class="font-weight-bold my-3 grey-text">Software Engineering</h4>
-                                        <button class="btn button-code">JAVA</button>
-                                        <button class="btn button-code">C</button>
-                                        <button class="btn button-code">PYTHON</button>
-                                        <button class="btn button-code">PHP</button>
-                                    </a>
-                                </div>
-
-                                <p class="grey-text">
-                                    The above are some of the languages I've used in the past and I'm most familiar
-                                    with.</p>
-                                <a href="./software" class="btn btn-white btn-sm" style="opacity: .9;">
-                                    <i class="fa fa-clone left"></i> View Projects</a>
-                            </div>
+                        <h3>Salesforce Certified Platform Administrator</h3>
+                        <p>Earned November 25, 2021</p>
+                    </article>
+                    <article class="certification-item">
+                        <div class="certification-image-box">
+                            <img src="img/certifications/salesforce-certified-platform-developer.png" width="120" height="120" alt="Salesforce Certified Platform Developer badge">
                         </div>
-                    </div>
+                        <h3>Salesforce Certified Platform Developer</h3>
+                        <p>Earned November 12, 2025</p>
+                    </article>
+                    <article class="certification-item">
+                        <div class="certification-image-box">
+                            <img src="img/certifications/salesforce-certified-omnistudio-developer.png" width="120" height="120" alt="Salesforce Certified OmniStudio Developer badge">
+                        </div>
+                        <h3>Salesforce Certified OmniStudio Developer</h3>
+                        <p>Earned May 21, 2025</p>
+                    </article>
+                    <article class="certification-item">
+                        <div class="certification-image-box">
+                            <img src="img/certifications/salesforce-certified-agentforce-specialist.png" width="120" height="120" alt="Salesforce Certified Agentforce Specialist badge">
+                        </div>
+                        <h3>Salesforce Certified Agentforce Specialist</h3>
+                        <p>Earned December 30, 2025</p>
+                    </article>
                 </div>
-
-                <br>
-
-                <!-- Digital Artwork Project  -->
-                <div class="container">
-                    <div class="row align-items-center wow fadeInUp">
-                        <div class="col-md-5 col-sm">
-                            <a href="./artwork">
-                                <div class="overlay align-items-center">
-                                    <img class="img-fluid card-img align-center lazyload" data-src="img/art_cover.png"
-                                        alt="Card Image of Digital Artwork Section" style="object-fit: cover;" />
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md ">
-                            <div class="card-body align-center">
-                                <div>
-                                    <a>
-                                        <h4 class="font-weight-bold my-3 grey-text">Digital Artwork</h4>
-                                        <button class="btn button-code">UNITY</button>
-                                        <button class="btn button-code">MAYA 3D MODELING</button>
-                                        <button class="btn button-code">PROCESSING</button>
-                                        <button class="btn button-code ">ADOBE SUITE</button>
-                                    </a>
-                                </div>
-
-                                <p class="grey-text">
-                                    The above are some of the art and design tools I've used in the past and I'm most
-                                    familiar
-                                    with.</p>
-                                <a href="./artwork" class="btn btn-white btn-sm" style="opacity: .9;">
-                                    <i class="fa fa-clone left"></i> View Art</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="certifications-actions">
+                    <a class="hero-button hero-button-primary certifications-verify-link" href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=DIlGTy0A3VYUmJVS9xUbc5GoB5Ft9+Kl78Kt65h3tVCJE6X4HJL3vFqsMzkeXL3Y" target="_blank" rel="noopener noreferrer">Verify Certifications <span aria-hidden="true">↗</span></a>
+                    <a class="trailblazer-link" href="https://www.salesforce.com/trailblazer/josuearana" target="_blank" rel="noopener noreferrer">View Trailblazer Profile <span aria-hidden="true">↗</span></a>
                 </div>
-
             </div>
-            <!-- Container -->
-
         </section>
+
         <!--Section: projects-->
+        <section id="projects" class="home-section home-projects">
+            <div class="container">
+                <div class="home-section-heading">
+                    <h2>Projects</h2>
+                    <p>Explore my web applications, software projects, and creative work.</p>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-card-image">
+                            <img src="img/netflix_cover.png" width="1076" height="800" alt="Netflix-inspired web application preview">
+                        </div>
+                        <div class="project-card-body">
+                            <h3>Web Development</h3>
+                            <p>Websites and interfaces built with HTML, CSS, JavaScript, and React, including client work and personal projects.</p>
+                            <a class="project-card-action" href="./web">View Web Projects <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-image">
+                            <img src="img/t0.png" width="1081" height="1026" alt="Triples mobile software project preview">
+                        </div>
+                        <div class="project-card-body">
+                            <h3>Software &amp; Academic Projects</h3>
+                            <p>Mobile applications and computer science projects exploring application development, interpreters, data structures, and algorithms.</p>
+                            <a class="project-card-action" href="./software">View Software Projects <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-image">
+                            <img src="img/art_cover.png" width="1076" height="800" alt="3D artwork work-area preview">
+                        </div>
+                        <div class="project-card-body">
+                            <h3>Creative Work</h3>
+                            <p>A collection of 3D modeling, interactive artwork, animation, and drawing projects.</p>
+                            <a class="project-card-action" href="./artwork">View Creative Work <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
 
         <section id="quote">
@@ -342,12 +282,12 @@
 
 
         <!--Section: contact-->
-        <section id="contact" class="py-5" style="background-color:#fdfdfd">
+        <section id="contact" class="py-5" style="background-color:var(--page-bg)">
 
             <div class="container">
 
                 <!-- Section heading -->
-                <h2 id="contact_now_header" class="font-weight-bold text-center mb-5" style="color: grey; ">Let's
+                <h2 id="contact_now_header" class="font-weight-bold text-center mb-5" style="color: var(--text); ">Let's
                     Talk! </h2>
                 <!-- Section description -->
                 <!-- <p class="text-center w-responsive mx-auto "></p> -->
@@ -423,7 +363,7 @@
 
                             <div class="text-center text-md-left">
                                 <p>
-                                    <button type="submit" id="contact_now" class="btn peach-gradient btn-lg">CONTACT
+                                    <button type="submit" id="contact_now" class="btn theme-primary-button btn-lg">CONTACT
                                         NOW</button>
                                 </p>
                             </div>
@@ -440,38 +380,37 @@
                             class="d-flex flex-lg-column flex-md-column flex-sm-row justify-content-center">
 
                             <style>
-                                .orange-hover {
-                                    color: grey;
+                                .contact-hover {
+                                    color: var(--secondary);
                                     padding: 5px 10px;
                                 }
 
-                                .orange-hover:hover {
-                                    color: #fa9c53;
-                                    /* background: linear-gradient(40deg, #ffd86f, #fc6262) !important; */
+                                .contact-hover:hover {
+                                    color: var(--primary);
 
                                 }
                             </style>
                             <!-- <div> -->
                             <a href="resume.pdf" target="_blank">
-                                <i class="orange-hover 	fa fa-user fa-3x mt-3" data-toggle="tooltip"
+                                <i class="contact-hover 	fa fa-user fa-3x mt-3" data-toggle="tooltip"
                                     data-placement="right" title="Resume"></i>
-                                <!-- <p class="orange-hover mb-0 white-text">Resume</p></i> -->
+                                <!-- <p class="contact-hover mb-0 white-text">Resume</p></i> -->
                             </a>
                             <!-- </div> -->
 
                             <!-- <div> -->
                             <a href="https://www.linkedin.com/in/josue-arana/" target="_blank" data-toggle="tooltip"
                                 data-placement="right" title="Connect on LinkedIn">
-                                <i class="orange-hover fab fa-linkedin fa-3x mt-3"></i>
-                                <!-- <p class="orange-hover mb-0 white-text">Let's Link up!</p> -->
+                                <i class="contact-hover fab fa-linkedin fa-3x mt-3"></i>
+                                <!-- <p class="contact-hover mb-0 white-text">Let's Link up!</p> -->
                             </a>
                             <!-- </div> -->
 
                             <!-- <div> -->
                             <a href="mailto:josuee.arana@gmail.com">
-                                <i class="orange-hover fa fa-envelope fa-3x mt-3" data-placement="right"
+                                <i class="contact-hover fa fa-envelope fa-3x mt-3" data-placement="right"
                                     title="Send Email"></i>
-                                <!-- <p class="orange-hover mb-0 white-text">Email Me</p> -->
+                                <!-- <p class="contact-hover mb-0 white-text">Email Me</p> -->
                             </a>
                             <!-- </div> -->
 
@@ -540,7 +479,8 @@
 
     <!-- jQuery -->
     <script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/jquery.js"></script>
+    <!-- Bootstrap dependency -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
@@ -549,9 +489,8 @@
 
 
     <!-- Custom scripts -->
+    <script src="./js/lightbox.js"></script>
     <script src="./js/lazysizes.min.js" async></script>
-    <script src="./js/lightbox-plus-jquery.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript">
 
 
@@ -567,31 +506,146 @@
     </script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js"></script>
-
-    <script async>
-
-        $('#ripple').ripples({
-            resolution: 512,
-            dropRadius: 20,
-            perturbance: 0.02,
-        });
-
+    <script>
         $(document).ready(function () {
             new WOW().init();
         });
 
         $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-        // end page loader animation 
-        $(window).on("load", function () {
-            $(".loader-wrapper").fadeOut("slow");
-            if ($('.navbar').hasClass('navbar-light')) {
-                $('.navbar').addClass('top-nav-collapse-light');
-            }
+            $('[data-toggle="tooltip"]').tooltip();
         });
+    </script>
 
+    <script>
+        (function () {
+            var animationContainer = document.getElementById('anim');
+            var animationFrame = document.getElementById('hero-animation-frame');
+            var fallback = document.getElementById('hero-logo-fallback');
+            var loader = document.getElementById('hero-animation-loader');
+            var motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+            var heroAnimation = null;
+            var scriptLoading = false;
+            var animationReady = false;
+            var inViewport = true;
+
+            if (!animationContainer || !animationFrame || !fallback || !loader) {
+                return;
+            }
+
+            function canAnimate() {
+                return !motionQuery.matches;
+            }
+
+            function updatePlayback() {
+                if (!heroAnimation || !animationReady) {
+                    return;
+                }
+
+                if (canAnimate() && inViewport && document.visibilityState === 'visible') {
+                    heroAnimation.play();
+                } else {
+                    heroAnimation.pause();
+                }
+            }
+
+            function showFallback() {
+                animationReady = false;
+                fallback.hidden = false;
+                loader.hidden = true;
+                animationContainer.replaceChildren();
+            }
+
+            function handleAnimationFailure() {
+                if (heroAnimation) {
+                    heroAnimation.destroy();
+                    heroAnimation = null;
+                }
+                showFallback();
+            }
+
+            function createAnimation() {
+                if (!canAnimate() || !window.bodymovin || heroAnimation) {
+                    loader.hidden = true;
+                    return;
+                }
+
+                try {
+                    heroAnimation = window.bodymovin.loadAnimation({
+                        container: animationContainer,
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        path: 'logo_animation.json'
+                    });
+                    heroAnimation.addEventListener('DOMLoaded', function () {
+                        animationReady = true;
+                        fallback.hidden = true;
+                        loader.hidden = true;
+                        updatePlayback();
+                    });
+                    heroAnimation.addEventListener('data_failed', handleAnimationFailure);
+                } catch (error) {
+                    handleAnimationFailure();
+                }
+            }
+
+            function loadAnimation() {
+                if (!canAnimate() || heroAnimation || scriptLoading) {
+                    return;
+                }
+
+                loader.hidden = false;
+                if (window.bodymovin) {
+                    createAnimation();
+                    return;
+                }
+
+                scriptLoading = true;
+                var script = document.createElement('script');
+                script.src = 'lottie.js';
+                script.async = true;
+                script.onload = function () {
+                    scriptLoading = false;
+                    createAnimation();
+                };
+                script.onerror = function () {
+                    scriptLoading = false;
+                    handleAnimationFailure();
+                };
+                document.head.appendChild(script);
+            }
+
+            function handleMotionPreferenceChange() {
+                if (canAnimate()) {
+                    loadAnimation();
+                } else {
+                    if (heroAnimation) {
+                        heroAnimation.destroy();
+                        heroAnimation = null;
+                    }
+                    showFallback();
+                }
+                updatePlayback();
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    inViewport = entries[0].isIntersecting;
+                    updatePlayback();
+                }, { threshold: 0.1 });
+                observer.observe(animationFrame);
+            }
+
+            document.addEventListener('visibilitychange', updatePlayback);
+            if (motionQuery.addEventListener) {
+                motionQuery.addEventListener('change', handleMotionPreferenceChange);
+            } else if (motionQuery.addListener) {
+                motionQuery.addListener(handleMotionPreferenceChange);
+            }
+
+            showFallback();
+            loadAnimation();
+        }());
     </script>
 
 
