@@ -1340,13 +1340,24 @@ h2 {
   background-color: #111;
 }
 
+.software-page .software-video-media {
+  aspect-ratio: auto;
+  background-color: #fff;
+}
+
+.software-page .software-video-media video {
+  height: auto;
+  object-fit: initial;
+  background-color: #fff;
+}
+
 .software-page .software-project-media video p {
   padding: 1rem;
-  color: #fff;
+  color: var(--text);
 }
 
 .software-page .software-project-media video p a {
-  color: #ffb476;
+  color: var(--primary);
 }
 
 .software-page .software-project-content {
