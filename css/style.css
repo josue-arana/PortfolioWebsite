@@ -356,6 +356,7 @@ h2 {
 }
 
 .home-page .hero-layout {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: 3rem;
@@ -2882,7 +2883,20 @@ body.bg,
   min-height: 100svh;
   align-items: center;
   padding: var(--home-nav-height) 0 2rem;
-  background-color: var(--page-bg);
+  background-color: #fcfdfd;
+}
+
+.home-page .hero-ribbons-background {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  pointer-events: none;
+  user-select: none;
 }
 
 .home-page #intro-section > .hero-inner {
@@ -2902,6 +2916,8 @@ body.bg,
 }
 
 .home-page .hero-copy {
+  position: relative;
+  z-index: 2;
   max-width: 39rem;
   margin: 0;
   padding: 1.5rem 0;
@@ -2948,22 +2964,6 @@ body.bg,
   isolation: isolate;
 }
 
-.home-page .hero-mesh {
-  position: absolute;
-  z-index: 0;
-  top: 4%;
-  right: -12%;
-  bottom: -3%;
-  left: -18%;
-  width: 130%;
-  height: 100%;
-  overflow: visible;
-  opacity: 0.94;
-  pointer-events: none;
-  -webkit-mask-image: radial-gradient(ellipse 76% 78% at 61% 50%, #000 42%, transparent 100%);
-  mask-image: radial-gradient(ellipse 76% 78% at 61% 50%, #000 42%, transparent 100%);
-}
-
 .home-page .hero-portrait img {
   position: relative;
   z-index: 1;
@@ -2983,12 +2983,14 @@ body.bg,
 
 @media (max-width: 991px) {
   .home-page #intro-section {
-    padding: var(--home-nav-height) 0 2rem;
+    display: block;
+    min-height: auto;
+    padding: calc(var(--home-nav-height) + 2rem) 0 0;
   }
 
   .home-page .hero-layout {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 0;
   }
 
   .home-page #intro-section > .hero-inner {
@@ -2996,15 +2998,27 @@ body.bg,
   }
 
   .home-page .hero-copy {
-    padding-top: 1.25rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .home-page .hero-portrait {
-    z-index: 1;
+    z-index: 3;
     width: min(100%, 22rem);
-    margin-right: auto;
-    margin-left: auto;
+    margin: clamp(-1.25rem, -4.8vw, -1rem) auto 0;
+  }
+
+  .home-page .hero-ribbons-background {
+    top: 34%;
+    right: auto;
+    bottom: 0;
+    left: 50%;
+    width: auto;
+    height: 69%;
+    max-width: none;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: translateX(-50%);
   }
 }
 
@@ -3035,30 +3049,56 @@ body.bg,
 
 @media (max-width: 575px) {
   .home-page #intro-section {
-    padding: var(--home-nav-height) 0 1.5rem;
+    padding: calc(var(--home-nav-height) + 2rem) 0 0;
   }
 
   .home-page .hero-copy {
-    padding-top: 0.75rem;
-    padding-bottom: 0.25rem;
+    padding: 0;
     text-align: left;
   }
 
   .home-page .hero-copy h1 {
-    font-size: clamp(3.25rem, 16vw, 4.5rem);
+    margin-top: 0.875rem;
+    margin-bottom: 0.75rem;
+    font-size: clamp(2.75rem, 12.5vw, 3.75rem);
+    text-align: center;
+  }
+
+  .home-page .hero-role {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    line-height: 1.35;
+  }
+
+  .home-page .hero-introduction {
+    margin-right: 0;
+    margin-bottom: 1.25rem;
+    margin-left: 0;
+    line-height: 1.6;
+  }
+
+  .home-page .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .home-page .hero-credibility {
+    margin-top: 0.75rem;
   }
 
   .home-page .hero-portrait {
     width: min(78vw, 19rem);
   }
 
-  .home-page .hero-mesh {
-    top: -2%;
-    right: -12%;
-    bottom: -2%;
-    left: -12%;
-    width: 124%;
-    height: 104%;
+  .home-page .hero-ribbons-background {
+    top: 39%;
+    height: 63%;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 575px) {
+  .home-page .hero-copy h1 {
+    white-space: nowrap;
   }
 }
 
