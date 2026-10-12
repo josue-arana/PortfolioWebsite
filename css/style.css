@@ -3240,33 +3240,36 @@ body.bg,
   background-color: var(--page-bg);
 }
 
-.home-page .home-quote-section::before,
-.home-page .home-quote-section::after {
+.home-page .home-quote-background {
   position: absolute;
   z-index: 0;
-  width: 22rem;
-  height: 12rem;
-  border: 1px solid rgba(3, 49, 112, 0.14);
-  border-radius: 50%;
-  content: "";
+  inset: 0;
+  overflow: hidden;
   pointer-events: none;
 }
 
-.home-page .home-quote-section::before {
-  top: -7rem;
-  left: -5rem;
-  box-shadow: 2.5rem 1.5rem 0 -0.4rem rgba(148, 163, 184, 0.16),
-    5.5rem 3rem 0 -0.8rem rgba(3, 49, 112, 0.08);
-  transform: rotate(-15deg);
+.home-page .home-quote-background img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 72%;
+  opacity: 0.32;
 }
 
-.home-page .home-quote-section::after {
-  right: -6rem;
-  bottom: -7rem;
-  border-color: rgba(148, 163, 184, 0.22);
-  box-shadow: -2.5rem -1.5rem 0 -0.4rem rgba(3, 49, 112, 0.08),
-    -5.5rem -3rem 0 -0.8rem rgba(148, 163, 184, 0.16);
-  transform: rotate(15deg);
+.home-page .home-quote-background::after {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(248, 250, 252, 0.98) 0%,
+    rgba(248, 250, 252, 0.88) 34%,
+    rgba(248, 250, 252, 0.48) 70%,
+    rgba(248, 250, 252, 0.58) 100%
+  );
+  content: "";
+  pointer-events: none;
 }
 
 .home-page .home-quote-container {
@@ -3298,6 +3301,20 @@ body.bg,
 }
 
 @media (max-width: 767px) {
+  .home-page .home-quote-background img {
+    object-position: center 78%;
+    opacity: 0.26;
+  }
+
+  .home-page .home-quote-background::after {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(248, 250, 252, 0.98) 0%,
+      rgba(248, 250, 252, 0.9) 42%,
+      rgba(248, 250, 252, 0.56) 100%
+    );
+  }
+
   .home-page .home-quote-container {
     padding: 2.5rem 1.5rem;
   }
