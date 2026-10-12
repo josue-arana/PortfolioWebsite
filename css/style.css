@@ -3023,13 +3023,31 @@ body.bg,
 }
 
 @media (min-width: 1200px) {
+  .home-page .hero-copy {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 39rem;
+    padding: 2.25rem 3rem 2.25rem 0;
+    border: 1px solid rgba(226, 232, 240, 0.82);
+    border-radius: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .home-page .hero-introduction {
+    max-width: 32rem;
+  }
+
   .home-page .hero-copy h1 {
     width: max-content;
     max-width: calc(100% + clamp(2rem, 4vw, 4.5rem));
   }
 
   .home-page .hero-portrait {
-    margin-left: -8rem;
+    margin-left: -4rem;
+  }
+
+  .home-page .hero-ribbons-background {
+    object-position: 58% center;
   }
 }
 
