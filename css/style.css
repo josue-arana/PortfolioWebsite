@@ -2890,13 +2890,110 @@ body.bg,
   position: absolute;
   z-index: 0;
   inset: 0;
+  container-type: size;
+  pointer-events: none;
+  user-select: none;
+}
+
+.home-page .hero-ribbons-artwork {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(100cqw, 177.68cqh);
+  aspect-ratio: 1672 / 941;
+  transform: translate(-50%, -50%);
+}
+
+.home-page .hero-ribbons-artwork img,
+.home-page .hero-orbit-overlay {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center center;
+}
+
+.home-page .hero-ribbon-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
   pointer-events: none;
-  user-select: none;
+}
+
+.home-page .hero-ribbon-canvas.is-ribbon-ready {
+  visibility: visible;
+}
+
+.home-page .hero-orbit-overlay {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+}
+
+.home-page .hero-orbit-overlay.is-motion-ready {
+  visibility: visible;
+}
+
+.home-page .hero-motion-toggle {
+  position: absolute;
+  z-index: 4;
+  right: 24px;
+  bottom: 24px;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--primary);
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.home-page .hero-motion-toggle:hover {
+  background: #fff;
+  color: var(--primary-hover);
+}
+
+.home-page .hero-motion-toggle:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.home-page .hero-motion-toggle[hidden] {
+  display: none;
+}
+
+.home-page .hero-motion-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.home-page .hero-motion-icon-play,
+.home-page .hero-motion-toggle[aria-pressed="false"] .hero-motion-icon-play {
+  display: none;
+}
+
+.home-page .hero-motion-toggle[aria-pressed="true"] .hero-motion-icon-pause {
+  display: none;
+}
+
+.home-page .hero-motion-toggle[aria-pressed="true"] .hero-motion-icon-play {
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .hero-ribbon-canvas.is-ribbon-ready,
+  .home-page .hero-orbit-overlay.is-motion-ready {
+    visibility: hidden;
+  }
 }
 
 .home-page #intro-section > .hero-inner {
@@ -2988,6 +3085,11 @@ body.bg,
     padding: calc(var(--home-nav-height) + 2rem) 0 0;
   }
 
+  .home-page .hero-inner {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .home-page .hero-layout {
     grid-template-columns: 1fr;
     gap: 0;
@@ -2998,8 +3100,8 @@ body.bg,
   }
 
   .home-page .hero-copy {
-    padding-top: 0;
-    padding-bottom: 0;
+    box-sizing: border-box;
+    padding: 0 1.5rem;
   }
 
   .home-page .hero-portrait {
@@ -3008,16 +3110,12 @@ body.bg,
     margin: clamp(-1.25rem, -4.8vw, -1rem) auto 0;
   }
 
-  .home-page .hero-ribbons-background {
-    top: 34%;
-    right: auto;
-    bottom: 0;
+  .home-page .hero-ribbons-artwork {
+    top: 34cqh;
     left: 50%;
-    width: auto;
-    height: 69%;
-    max-width: none;
-    object-fit: contain;
-    object-position: center bottom;
+    width: 122.6cqh;
+    height: 69cqh;
+    aspect-ratio: auto;
     transform: translateX(-50%);
   }
 }
@@ -3025,9 +3123,9 @@ body.bg,
 @media (min-width: 1200px) {
   .home-page .hero-copy {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 39rem;
-    padding: 2.25rem 3rem 2.25rem 0;
+    width: calc(100% + 2rem);
+    max-width: 42rem;
+    padding: 2.25rem 1.875rem;
     border: 1px solid rgba(226, 232, 240, 0.82);
     border-radius: 1.25rem;
     background-color: rgba(255, 255, 255, 0.9);
@@ -3038,16 +3136,17 @@ body.bg,
   }
 
   .home-page .hero-copy h1 {
-    width: max-content;
-    max-width: calc(100% + clamp(2rem, 4vw, 4.5rem));
+    width: auto;
+    max-width: 100%;
   }
 
   .home-page .hero-portrait {
     margin-left: -4rem;
   }
 
-  .home-page .hero-ribbons-background {
-    object-position: 58% center;
+  .home-page .hero-ribbons-artwork {
+    left: 58%;
+    transform: translate(-58%, -50%);
   }
 }
 
@@ -3071,7 +3170,6 @@ body.bg,
   }
 
   .home-page .hero-copy {
-    padding: 0;
     text-align: left;
   }
 
@@ -3108,9 +3206,21 @@ body.bg,
     width: min(78vw, 19rem);
   }
 
-  .home-page .hero-ribbons-background {
-    top: 39%;
-    height: 63%;
+  .home-page .hero-ribbons-artwork {
+    top: 39cqh;
+    width: 111.94cqh;
+    height: 63cqh;
+  }
+}
+
+@media (max-width: 991px) {
+  .home-page .hero-motion-toggle {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .home-page .hero-orbit-dot:nth-child(n + 3) {
+    visibility: hidden;
   }
 }
 

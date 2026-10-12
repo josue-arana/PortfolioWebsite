@@ -113,7 +113,34 @@
         <!-- Full Page Intro -->
 
         <section id="intro-section" class="view" aria-labelledby="hero-title">
-            <img class="hero-ribbons-background" src="img/hero-ribbons-background.png" alt="" aria-hidden="true" tabindex="-1">
+            <div class="hero-ribbons-background" aria-hidden="true">
+                <div class="hero-ribbons-artwork">
+                    <img src="img/hero-ribbons-no-dots.png" width="1672" height="941" alt="">
+                    <canvas class="hero-ribbon-canvas" aria-hidden="true"></canvas>
+                    <svg class="hero-orbit-overlay" viewBox="0 0 1672 941" preserveAspectRatio="none" focusable="false">
+                        <circle class="hero-orbit-dot" r="3.5" fill="#033170" opacity="0">
+                            <animateMotion data-orbit-animation="" begin="indefinite" dur="18s" repeatCount="indefinite" path="M 850 736 C 930 730 1030 660 1115 580 C 1160 535 1210 500 1260 490"></animateMotion>
+                            <animate data-orbit-animation="" attributeName="opacity" begin="indefinite" dur="18s" repeatCount="indefinite" values="0;0.85;0.85;0" keyTimes="0;0.12;0.8;1"></animate>
+                        </circle>
+                        <circle class="hero-orbit-dot" r="3" fill="#73b9f0" opacity="0">
+                            <animateMotion data-orbit-animation="" begin="indefinite" dur="23s" repeatCount="indefinite" path="M 900 625 C 1000 575 1070 560 1150 500 C 1240 430 1320 410 1400 390"></animateMotion>
+                            <animate data-orbit-animation="" attributeName="opacity" begin="indefinite" dur="23s" repeatCount="indefinite" values="0;0.9;0.9;0" keyTimes="0;0.1;0.82;1"></animate>
+                        </circle>
+                        <circle class="hero-orbit-dot" r="3.25" fill="#033170" opacity="0">
+                            <animateMotion data-orbit-animation="" begin="indefinite" dur="27s" repeatCount="indefinite" path="M 1160 312 C 1250 250 1340 195 1440 188 C 1540 175 1610 192 1670 178"></animateMotion>
+                            <animate data-orbit-animation="" attributeName="opacity" begin="indefinite" dur="27s" repeatCount="indefinite" values="0;0.8;0.8;0" keyTimes="0;0.14;0.78;1"></animate>
+                        </circle>
+                        <circle class="hero-orbit-dot" r="3" fill="#73b9f0" opacity="0">
+                            <animateMotion data-orbit-animation="" begin="indefinite" dur="30s" repeatCount="indefinite" path="M 1095 441 C 1230 398 1305 360 1420 325 C 1540 300 1620 265 1672 214"></animateMotion>
+                            <animate data-orbit-animation="" attributeName="opacity" begin="indefinite" dur="30s" repeatCount="indefinite" values="0;0.85;0.85;0" keyTimes="0;0.1;0.8;1"></animate>
+                        </circle>
+                        <circle class="hero-orbit-dot" r="3.5" fill="#033170" opacity="0">
+                            <animateMotion data-orbit-animation="" begin="indefinite" dur="21s" repeatCount="indefinite" path="M 1260 560 C 1370 480 1440 430 1525 450 C 1585 470 1625 465 1672 389"></animateMotion>
+                            <animate data-orbit-animation="" attributeName="opacity" begin="indefinite" dur="21s" repeatCount="indefinite" values="0;0.8;0.8;0" keyTimes="0;0.13;0.83;1"></animate>
+                        </circle>
+                    </svg>
+                </div>
+            </div>
             <div class="container hero-inner">
                 <div class="hero-layout">
                     <div class="hero-copy">
@@ -131,6 +158,10 @@
                     </div>
                 </div>
             </div>
+            <button class="hero-motion-toggle" type="button" data-hero-motion-toggle aria-label="Pause background animation" aria-pressed="false" hidden>
+                <svg class="hero-motion-icon hero-motion-icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM15 5h4v14h-4z"></path></svg>
+                <svg class="hero-motion-icon hero-motion-icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13l10-6.5z"></path></svg>
+            </button>
         </section>
 
 
@@ -365,6 +396,7 @@
     <!-- Custom scripts -->
     <script src="./js/lightbox.js"></script>
     <script src="./js/lazysizes.min.js" async></script>
+    <script src="./js/hero-orbit-controller.js" defer></script>
     <script type="text/javascript">
 
 
